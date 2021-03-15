@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE67067625FF82E00074323A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067525FF82E00074323A /* Home.swift */; };
+		CE67067925FF83010074323A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067825FF83010074323A /* Session.swift */; };
+		CE67067E25FF84730074323A /* Home.Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067D25FF84730074323A /* Home.Greet.swift */; };
 		CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0F33F25FF7D4C00CFB18C /* App.swift */; };
 		CEA0F34425FF7D4C00CFB18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE67067525FF82E00074323A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CE67067825FF83010074323A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
 		CEA0F33C25FF7D4C00CFB18C /* Walksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA0F33F25FF7D4C00CFB18C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +56,9 @@
 			children = (
 				CEA0F34825FF7D4C00CFB18C /* Info.plist */,
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
+				CE67067D25FF84730074323A /* Home.Greet.swift */,
+				CE67067525FF82E00074323A /* Home.swift */,
+				CE67067825FF83010074323A /* Session.swift */,
 				CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */,
 			);
 			path = iOS;
@@ -123,7 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE67067625FF82E00074323A /* Home.swift in Sources */,
+				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,
+				CE67067925FF83010074323A /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
