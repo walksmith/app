@@ -5,35 +5,31 @@ extension Home {
         @Binding var session: Session
         
         var body: some View {
-            Image(systemName: "figure.walk.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 80)
-                .foregroundColor(.blue)
-                .padding(.top)
-            Text(verbatim: session.name)
-                .font(Font.title)
-                .fontWeight(.medium)
-                .padding(.horizontal)
-            Text(time)
-                .foregroundColor(.secondary)
-                .font(.footnote)
-                .padding(.horizontal)
-        }
-        
-        private var time: String {
-            switch Calendar.current.component(.hour, from: .init()) {
-            case 6 ..< 12:
-                return "Good Morning"
-            case 12:
-                return "Good Day"
-            case 13 ..< 17:
-                return "Good Afternoon"
-            case 17 ..< 22:
-                return "Good Evening"
-            default:
-                return "Good Night"
+            ZStack {
+                Circle()
+                    .fill(LinearGradient(
+                            gradient: .init(colors: [.blue, .init(.systemIndigo)]),
+                            startPoint: .top,
+                            endPoint: .bottom))
+                    .frame(width: 100, height: 100)
+                if session.image == nil {
+                    Image(systemName: "figure.walk")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                } else {
+                    Image(uiImage: session.image!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 90, height: 90)
+                        .clipShape(Circle())
+                }
             }
+            .padding(.top, 40)
+            Text(verbatim: session.name)
+                .font(Font.title2)
+                .fontWeight(.medium)
+                .padding()
+                .id(session.name)
         }
     }
 }

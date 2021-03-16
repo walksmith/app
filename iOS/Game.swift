@@ -3,7 +3,7 @@ import Combine
 
 final class Game {
     let name = PassthroughSubject<String, Never>()
-    let photo = PassthroughSubject<UIImage, Never>()
+    let image = PassthroughSubject<UIImage, Never>()
     
     func login() {
         guard !GKLocalPlayer.local.isAuthenticated else { return }
@@ -11,6 +11,11 @@ final class Game {
             guard let controller = controller else {
                 if error == nil {
                     self?.name.send(GKLocalPlayer.local.displayName)
+                    GKLocalPlayer.local.loadPhoto(for: .normal) { image, _ in
+                        image.map {
+                            self?.image.send($0)
+                        }
+                    }
                 }
                 return
             }

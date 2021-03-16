@@ -1,5 +1,6 @@
-import Foundation
+import UIKit
 
 struct Session {
-    var name = "Incognito Player"
+    var name = "Player"
+    var image: UIImage?
 }

@@ -8,8 +8,15 @@ import SwiftUI
     var body: some Scene {
         WindowGroup {
             Home(session: $session)
-                .onReceive(game.name) {
-                    session.name = $0
+                .onReceive(game.name) { name in
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        session.name = name
+                    }
+                }
+                .onReceive(game.image) { image in
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        session.image = image
+                    }
                 }
         }
         .onChange(of: phase) {

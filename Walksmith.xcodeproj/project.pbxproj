@@ -13,6 +13,7 @@
 		CE67068325FF980C0074323A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67068225FF980C0074323A /* GameKit.framework */; };
 		CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0F33F25FF7D4C00CFB18C /* App.swift */; };
 		CEA0F34425FF7D4C00CFB18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */; };
+		CEB836122600E1430021BF60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEB836112600E1430021BF60 /* Settings.bundle */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		CEA0F33F25FF7D4C00CFB18C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA0F34825FF7D4C00CFB18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB836112600E1430021BF60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 		CEA0F33E25FF7D4C00CFB18C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CEB836112600E1430021BF60 /* Settings.bundle */,
 				CEA0F34825FF7D4C00CFB18C /* Info.plist */,
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
@@ -139,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB836122600E1430021BF60 /* Settings.bundle in Resources */,
 				CEA0F34425FF7D4C00CFB18C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
