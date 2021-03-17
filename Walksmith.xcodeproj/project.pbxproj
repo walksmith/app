@@ -19,6 +19,8 @@
 		CE67067925FF83010074323A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067825FF83010074323A /* Session.swift */; };
 		CE67067E25FF84730074323A /* Home.Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067D25FF84730074323A /* Home.Greet.swift */; };
 		CE67068325FF980C0074323A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67068225FF980C0074323A /* GameKit.framework */; };
+		CE9D770626025EA7000BB7CC /* Walking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D770526025EA7000BB7CC /* Walking.swift */; };
+		CE9D770B260265C8000BB7CC /* Walking.Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D770A260265C8000BB7CC /* Walking.Counter.swift */; };
 		CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0F33F25FF7D4C00CFB18C /* App.swift */; };
 		CEA0F34425FF7D4C00CFB18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */; };
 		CEB836122600E1430021BF60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEB836112600E1430021BF60 /* Settings.bundle */; };
@@ -41,6 +43,8 @@
 		CE67067825FF83010074323A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
 		CE67068225FF980C0074323A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE9D770526025EA7000BB7CC /* Walking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.swift; sourceTree = "<group>"; };
+		CE9D770A260265C8000BB7CC /* Walking.Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Counter.swift; sourceTree = "<group>"; };
 		CEA0F33C25FF7D4C00CFB18C /* Walksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA0F33F25FF7D4C00CFB18C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				CE4180B2260242310046B18F /* Session.Section.swift */,
 				CE67067825FF83010074323A /* Session.swift */,
 				CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */,
+				CE9D770A260265C8000BB7CC /* Walking.Counter.swift */,
+				CE9D770526025EA7000BB7CC /* Walking.swift */,
 				CE4180AF260241F50046B18F /* Window.swift */,
 				CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */,
 			);
@@ -196,12 +202,14 @@
 				CE4180B0260241F50046B18F /* Window.swift in Sources */,
 				CE4180B7260245190046B18F /* Detail.swift in Sources */,
 				CE4180B3260242310046B18F /* Session.Section.swift in Sources */,
+				CE9D770626025EA7000BB7CC /* Walking.swift in Sources */,
 				CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */,
 				CE67067625FF82E00074323A /* Home.swift in Sources */,
 				CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */,
 				CEB836162600E9690021BF60 /* Home.Item.swift in Sources */,
 				CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */,
 				CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */,
+				CE9D770B260265C8000BB7CC /* Walking.Counter.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,

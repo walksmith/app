@@ -8,12 +8,12 @@ extension Home {
             ZStack {
                 Circle()
                     .fill(LinearGradient(
-                            gradient: .init(colors: [.blue, .init(.systemIndigo)]),
-                            startPoint: .top,
+                            gradient: .init(colors: [.pink, .init(.systemIndigo)]),
+                            startPoint: .topLeading,
                             endPoint: .bottom))
                     .frame(width: 100, height: 100)
                 if session.player.image == nil {
-                    Image(systemName: "figure.walk")
+                    Image(systemName: "person.fill")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                 } else {

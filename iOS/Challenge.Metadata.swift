@@ -31,7 +31,7 @@ extension Challenge {
     var symbol: String {
         switch self {
         case .streak:
-            return "figure.walk"
+            return "calendar"
         case .steps:
             return "speedometer"
         case .distance:

@@ -30,7 +30,7 @@ extension Home {
                                 .font(.title)
                         }
                         if session.archive.enrolled(challenge) {
-                            Text("Overview")
+                            //Text("Overview")
                         }
                     }
                     .padding()
