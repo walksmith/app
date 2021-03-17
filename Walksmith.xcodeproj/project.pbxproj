@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CE045CE72601141A00E72767 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE045CE62601141A00E72767 /* CloudKit.framework */; };
+		CE66B402260218C000609850 /* Smith in Frameworks */ = {isa = PBXBuildFile; productRef = CE66B401260218C000609850 /* Smith */; };
 		CE67067625FF82E00074323A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067525FF82E00074323A /* Home.swift */; };
 		CE67067925FF83010074323A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067825FF83010074323A /* Session.swift */; };
 		CE67067E25FF84730074323A /* Home.Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067D25FF84730074323A /* Home.Greet.swift */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE66B402260218C000609850 /* Smith in Frameworks */,
 				CE67068325FF980C0074323A /* GameKit.framework in Frameworks */,
 				CE045CE72601141A00E72767 /* CloudKit.framework in Frameworks */,
 			);
@@ -113,6 +115,9 @@
 			dependencies = (
 			);
 			name = iOS;
+			packageProductDependencies = (
+				CE66B401260218C000609850 /* Smith */,
+			);
 			productName = iOS;
 			productReference = CEA0F33C25FF7D4C00CFB18C /* Walksmith.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +145,9 @@
 				Base,
 			);
 			mainGroup = CEA0F33125FF7D3C00CFB18C;
+			packageReferences = (
+				CE66B400260218C000609850 /* XCRemoteSwiftPackageReference "smith" */,
+			);
 			productRefGroup = CEA0F33D25FF7D4C00CFB18C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -366,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE66B400260218C000609850 /* XCRemoteSwiftPackageReference "smith" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/walksmith/smith.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE66B401260218C000609850 /* Smith */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE66B400260218C000609850 /* XCRemoteSwiftPackageReference "smith" */;
+			productName = Smith;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEA0F33225FF7D3C00CFB18C /* Project object */;
 }

@@ -1,4 +1,5 @@
 import SwiftUI
+import Smith
 
 extension Home {
     struct Item: View {

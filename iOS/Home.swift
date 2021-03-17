@@ -1,4 +1,5 @@
 import SwiftUI
+import Smith
 
 struct Home: View {
     @Binding var session: Session

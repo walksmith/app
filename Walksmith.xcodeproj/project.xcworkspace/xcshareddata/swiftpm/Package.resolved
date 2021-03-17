@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Archivable",
+        "repositoryURL": "https://github.com/archivable/package.git",
+        "state": {
+          "branch": "main",
+          "revision": "99a2c9f32842cc5abc252824627f6b5cc761552e",
+          "version": null
+        }
+      },
+      {
+        "package": "Smith",
+        "repositoryURL": "https://github.com/walksmith/smith.git",
+        "state": {
+          "branch": "main",
+          "revision": "99f482ba755ced7d57e92ef1f41633b80ed3dcba",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

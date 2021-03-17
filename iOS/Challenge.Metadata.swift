@@ -1,4 +1,5 @@
 import SwiftUI
+import Smith
 
 extension Challenge {
     var title: String {
