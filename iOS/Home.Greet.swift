@@ -12,12 +12,12 @@ extension Home {
                             startPoint: .top,
                             endPoint: .bottom))
                     .frame(width: 100, height: 100)
-                if session.image == nil {
+                if session.player.image == nil {
                     Image(systemName: "figure.walk")
                         .font(.largeTitle)
                         .foregroundColor(.white)
                 } else {
-                    Image(uiImage: session.image!)
+                    Image(uiImage: session.player.image!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 90, height: 90)
@@ -25,11 +25,11 @@ extension Home {
                 }
             }
             .padding(.top, 40)
-            Text(verbatim: session.name)
+            Text(verbatim: session.player.name)
                 .font(Font.title2)
                 .fontWeight(.medium)
                 .padding()
-                .id(session.name)
+                .id(session.player.name)
         }
     }
 }

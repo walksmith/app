@@ -9,8 +9,8 @@ struct Home: View {
             Greet(session: $session)
             Spacer()
                 .frame(height: 20)
-            ForEach(Challenge.allCases, id: \.self) {
-                Item(session: $session, challenge: $0)
+            ForEach(Challenge.allCases, id: \.self) { challenge in
+                Item(session: $session, challenge: challenge)
             }
             Spacer()
                 .frame(height: 20)

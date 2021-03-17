@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CE045CE72601141A00E72767 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE045CE62601141A00E72767 /* CloudKit.framework */; };
+		CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23589326023AA700D2BFBB /* Session.Player.swift */; };
+		CE4180B0260241F50046B18F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180AF260241F50046B18F /* Window.swift */; };
+		CE4180B3260242310046B18F /* Session.Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B2260242310046B18F /* Session.Section.swift */; };
+		CE4180B7260245190046B18F /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B6260245190046B18F /* Detail.swift */; };
+		CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180BA26024A0F0046B18F /* Detail.Start.swift */; };
+		CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180BE26024D620046B18F /* App.Delegate.swift */; };
 		CE66B402260218C000609850 /* Smith in Frameworks */ = {isa = PBXBuildFile; productRef = CE66B401260218C000609850 /* Smith */; };
 		CE67067625FF82E00074323A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067525FF82E00074323A /* Home.swift */; };
 		CE67067925FF83010074323A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067825FF83010074323A /* Session.swift */; };
@@ -25,6 +31,12 @@
 /* Begin PBXFileReference section */
 		CE045CE42601140F00E72767 /* Walksmith.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walksmith.entitlements; sourceTree = "<group>"; };
 		CE045CE62601141A00E72767 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE23589326023AA700D2BFBB /* Session.Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Player.swift; sourceTree = "<group>"; };
+		CE4180AF260241F50046B18F /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		CE4180B2260242310046B18F /* Session.Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Section.swift; sourceTree = "<group>"; };
+		CE4180B6260245190046B18F /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		CE4180BA26024A0F0046B18F /* Detail.Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Start.swift; sourceTree = "<group>"; };
+		CE4180BE26024D620046B18F /* App.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Delegate.swift; sourceTree = "<group>"; };
 		CE67067525FF82E00074323A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CE67067825FF83010074323A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
@@ -83,17 +95,23 @@
 		CEA0F33E25FF7D4C00CFB18C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CE045CE42601140F00E72767 /* Walksmith.entitlements */,
 				CEB836112600E1430021BF60 /* Settings.bundle */,
+				CE045CE42601140F00E72767 /* Walksmith.entitlements */,
 				CEA0F34825FF7D4C00CFB18C /* Info.plist */,
+				CE4180BE26024D620046B18F /* App.Delegate.swift */,
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
 				CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */,
+				CE4180BA26024A0F0046B18F /* Detail.Start.swift */,
+				CE4180B6260245190046B18F /* Detail.swift */,
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
 				CE67067D25FF84730074323A /* Home.Greet.swift */,
 				CEB836152600E9690021BF60 /* Home.Item.swift */,
 				CE67067525FF82E00074323A /* Home.swift */,
+				CE23589326023AA700D2BFBB /* Session.Player.swift */,
+				CE4180B2260242310046B18F /* Session.Section.swift */,
 				CE67067825FF83010074323A /* Session.swift */,
 				CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */,
+				CE4180AF260241F50046B18F /* Window.swift */,
 				CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */,
 			);
 			path = iOS;
@@ -175,10 +193,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB8361E2600EF1D0021BF60 /* Challenge.Metadata.swift in Sources */,
+				CE4180B0260241F50046B18F /* Window.swift in Sources */,
+				CE4180B7260245190046B18F /* Detail.swift in Sources */,
+				CE4180B3260242310046B18F /* Session.Section.swift in Sources */,
 				CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */,
 				CE67067625FF82E00074323A /* Home.swift in Sources */,
 				CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */,
 				CEB836162600E9690021BF60 /* Home.Item.swift in Sources */,
+				CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */,
+				CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */,
+				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,
 				CE67067925FF83010074323A /* Session.swift in Sources */,
