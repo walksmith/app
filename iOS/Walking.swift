@@ -4,10 +4,10 @@ struct Walking: View {
     @Binding var session: Session
     
     var body: some View {
-        ScrollView {
+        VStack {
             Image(systemName: "figure.walk")
                 .font(.largeTitle)
-                .padding(.top, 40)
+                .padding(.top, 60)
             Counter(session: $session)
                 .padding(.vertical)
             Button {
@@ -16,16 +16,18 @@ struct Walking: View {
                 }
             } label: {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 8)
-                    Text("Finish")
+                    Capsule()
+                    Text("FINISH")
                         .foregroundColor(.white)
-                        .font(Font.callout.bold())
-                        .padding(.horizontal, 26)
-                        .padding(.vertical, 9)
+                        .font(Font.callout)
+                        .fontWeight(.medium)
+                        .padding(.horizontal, 60)
+                        .padding(.vertical, 7)
                 }
                 .fixedSize()
             }
-            .padding(.vertical)
+            .padding()
+            Spacer()
         }
     }
 }
