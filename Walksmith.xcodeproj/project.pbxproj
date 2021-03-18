@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE045CE72601141A00E72767 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE045CE62601141A00E72767 /* CloudKit.framework */; };
 		CE0C2A9A2603664400256AA5 /* Shadowed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2A992603664400256AA5 /* Shadowed.swift */; };
+		CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2A9D26036BF300256AA5 /* Walking.Time.swift */; };
+		CE0C2AA32603728000256AA5 /* Walking.Time.Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */; };
+		CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */; };
 		CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23589326023AA700D2BFBB /* Session.Player.swift */; };
 		CE4180B0260241F50046B18F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180AF260241F50046B18F /* Window.swift */; };
 		CE4180B3260242310046B18F /* Session.Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B2260242310046B18F /* Session.Section.swift */; };
@@ -21,7 +24,6 @@
 		CE67067E25FF84730074323A /* Home.Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067D25FF84730074323A /* Home.Greet.swift */; };
 		CE67068325FF980C0074323A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67068225FF980C0074323A /* GameKit.framework */; };
 		CE9D770626025EA7000BB7CC /* Walking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D770526025EA7000BB7CC /* Walking.swift */; };
-		CE9D770B260265C8000BB7CC /* Walking.Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D770A260265C8000BB7CC /* Walking.Counter.swift */; };
 		CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0F33F25FF7D4C00CFB18C /* App.swift */; };
 		CEA0F34425FF7D4C00CFB18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */; };
 		CEB836122600E1430021BF60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEB836112600E1430021BF60 /* Settings.bundle */; };
@@ -35,6 +37,9 @@
 		CE045CE42601140F00E72767 /* Walksmith.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walksmith.entitlements; sourceTree = "<group>"; };
 		CE045CE62601141A00E72767 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE0C2A992603664400256AA5 /* Shadowed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadowed.swift; sourceTree = "<group>"; };
+		CE0C2A9D26036BF300256AA5 /* Walking.Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Time.swift; sourceTree = "<group>"; };
+		CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Time.Ring.swift; sourceTree = "<group>"; };
+		CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Segmented.swift; sourceTree = "<group>"; };
 		CE23589326023AA700D2BFBB /* Session.Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Player.swift; sourceTree = "<group>"; };
 		CE4180AF260241F50046B18F /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		CE4180B2260242310046B18F /* Session.Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Section.swift; sourceTree = "<group>"; };
@@ -46,7 +51,6 @@
 		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
 		CE67068225FF980C0074323A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE9D770526025EA7000BB7CC /* Walking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.swift; sourceTree = "<group>"; };
-		CE9D770A260265C8000BB7CC /* Walking.Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Counter.swift; sourceTree = "<group>"; };
 		CEA0F33C25FF7D4C00CFB18C /* Walksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA0F33F25FF7D4C00CFB18C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,8 +122,10 @@
 				CE67067825FF83010074323A /* Session.swift */,
 				CE0C2A992603664400256AA5 /* Shadowed.swift */,
 				CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */,
-				CE9D770A260265C8000BB7CC /* Walking.Counter.swift */,
+				CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */,
 				CE9D770526025EA7000BB7CC /* Walking.swift */,
+				CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */,
+				CE0C2A9D26036BF300256AA5 /* Walking.Time.swift */,
 				CE4180AF260241F50046B18F /* Window.swift */,
 				CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */,
 			);
@@ -201,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0C2AA32603728000256AA5 /* Walking.Time.Ring.swift in Sources */,
 				CEB8361E2600EF1D0021BF60 /* Challenge.Metadata.swift in Sources */,
 				CE4180B0260241F50046B18F /* Window.swift in Sources */,
 				CE4180B7260245190046B18F /* Detail.swift in Sources */,
@@ -213,9 +220,10 @@
 				CEB836162600E9690021BF60 /* Home.Item.swift in Sources */,
 				CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */,
 				CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */,
-				CE9D770B260265C8000BB7CC /* Walking.Counter.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
+				CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */,
+				CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,
 				CE67067925FF83010074323A /* Session.swift in Sources */,
 			);

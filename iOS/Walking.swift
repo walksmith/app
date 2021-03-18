@@ -5,11 +5,8 @@ struct Walking: View {
     
     var body: some View {
         VStack {
+            Time(session: $session)
             Spacer()
-            Image(systemName: "figure.walk")
-                .font(.largeTitle)
-            Counter(session: $session)
-                .padding(.bottom)
             Button {
                 withAnimation(.spring(blendDuration: 0.4)) {
                     session.archive.end()
@@ -41,7 +38,8 @@ struct Walking: View {
                     .font(.caption)
                     .frame(width: 300, height: 28)
             }
-            .padding(.vertical)
+            .padding(.top, 5)
+            .padding(.bottom)
         }
     }
 }
