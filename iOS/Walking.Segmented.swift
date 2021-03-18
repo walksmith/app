@@ -7,7 +7,7 @@ extension Walking {
         @Binding var challenge: Challenge?
         
         var body: some View {
-            HStack {
+            HStack(spacing: 2) {
                 Item(symbol: "timelapse", status: challenge == nil ? .selected : .on) {
                     challenge = nil
                 }

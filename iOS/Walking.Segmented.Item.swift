@@ -12,15 +12,14 @@ extension Walking.Segmented {
                     Circle()
                         .fill(status == .selected ? Color.accentColor : .clear)
                     Image(systemName: symbol)
+                        .font(.title2)
                         .foregroundColor(status == .selected
                                             ? .white
                                             : status == .on
                                                 ? .secondary
-                                                : .init(.tertiaryLabel))
-                        .font(.title2)
-                        .padding(10)
+                                                : .init(.quaternaryLabel))
                 }
-                .fixedSize()
+                .frame(width: 50, height: 50)
             }
         }
     }

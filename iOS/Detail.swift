@@ -9,7 +9,7 @@ struct Detail: View {
         VStack {
             HStack {
                 Button {
-                    withAnimation(.spring(blendDuration: 0.4)) {
+                    withAnimation(.spring(blendDuration: 0.3)) {
                         session.section = .home
                     }
                 } label: {

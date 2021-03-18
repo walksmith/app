@@ -17,7 +17,7 @@ struct Walking: View {
             
             Spacer()
             Button {
-                withAnimation(.spring(blendDuration: 0.4)) {
+                withAnimation(.spring(blendDuration: 0.3)) {
                     session.archive.end()
                 }
             } label: {
@@ -32,22 +32,22 @@ struct Walking: View {
                         .foregroundColor(.white)
                         .font(Font.callout)
                         .fontWeight(.medium)
-                        .padding(.horizontal, 60)
-                        .padding(.vertical, 8)
+                        .padding(.horizontal, 64)
+                        .padding(.vertical, 10)
                 }
                 .fixedSize()
             }
             Button {
-                withAnimation(.spring(blendDuration: 0.4)) {
+                withAnimation(.spring(blendDuration: 0.3)) {
                     session.archive.cancel()
                 }
             } label: {
                 Text("CANCEL")
                     .foregroundColor(.secondary)
                     .font(.caption)
-                    .frame(width: 300, height: 28)
+                    .frame(width: 300, height: 34)
             }
-            .padding(.top, 5)
+            .padding(.top, 10)
             .padding(.bottom)
         }
     }
