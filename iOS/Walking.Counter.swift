@@ -14,7 +14,7 @@ extension Walking {
                 .onAppear {
                     formatter.allowedUnits = [.hour, .minute, .second]
                     formatter.unitsStyle = .positional
-                    formatter.zeroFormattingBehavior = .pad
+                    formatter.zeroFormattingBehavior = .dropLeading
                 }
                 .onReceive(timer) { _ in
                     if case let .walking(duration) = session.archive.status {

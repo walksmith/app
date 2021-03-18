@@ -5,11 +5,11 @@ struct Walking: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Image(systemName: "figure.walk")
                 .font(.largeTitle)
-                .padding(.top, 60)
             Counter(session: $session)
-                .padding(.vertical)
+                .padding(.bottom)
             Button {
                 withAnimation(.spring(blendDuration: 0.4)) {
                     session.archive.end()
@@ -17,17 +17,31 @@ struct Walking: View {
             } label: {
                 ZStack {
                     Capsule()
+                        .fill(LinearGradient(
+                                gradient: .init(colors: [.init(.systemTeal), .blue]),
+                                startPoint: .leading,
+                                endPoint: .trailing))
+                        .shadow(color: Color.primary.opacity(0.4), radius: 4, y: 2)
                     Text("FINISH")
                         .foregroundColor(.white)
                         .font(Font.callout)
                         .fontWeight(.medium)
                         .padding(.horizontal, 60)
-                        .padding(.vertical, 7)
+                        .padding(.vertical, 8)
                 }
                 .fixedSize()
             }
-            .padding()
-            Spacer()
+            Button {
+                withAnimation(.spring(blendDuration: 0.4)) {
+                    session.archive.end()
+                }
+            } label: {
+                Text("CANCEL")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+                    .frame(width: 300, height: 28)
+            }
+            .padding(.vertical)
         }
     }
 }
