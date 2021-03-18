@@ -12,6 +12,8 @@
 		CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2A9D26036BF300256AA5 /* Walking.Time.swift */; };
 		CE0C2AA32603728000256AA5 /* Walking.Time.Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */; };
 		CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */; };
+		CE0C2AAD26038EDA00256AA5 /* Walking.Segmented.Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2AAC26038EDA00256AA5 /* Walking.Segmented.Item.swift */; };
+		CE0C2AB12603921C00256AA5 /* Walking.Segmented.Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2AB02603921C00256AA5 /* Walking.Segmented.Status.swift */; };
 		CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23589326023AA700D2BFBB /* Session.Player.swift */; };
 		CE4180B0260241F50046B18F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180AF260241F50046B18F /* Window.swift */; };
 		CE4180B3260242310046B18F /* Session.Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B2260242310046B18F /* Session.Section.swift */; };
@@ -40,6 +42,8 @@
 		CE0C2A9D26036BF300256AA5 /* Walking.Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Time.swift; sourceTree = "<group>"; };
 		CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Time.Ring.swift; sourceTree = "<group>"; };
 		CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Segmented.swift; sourceTree = "<group>"; };
+		CE0C2AAC26038EDA00256AA5 /* Walking.Segmented.Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Segmented.Item.swift; sourceTree = "<group>"; };
+		CE0C2AB02603921C00256AA5 /* Walking.Segmented.Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Segmented.Status.swift; sourceTree = "<group>"; };
 		CE23589326023AA700D2BFBB /* Session.Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Player.swift; sourceTree = "<group>"; };
 		CE4180AF260241F50046B18F /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		CE4180B2260242310046B18F /* Session.Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Section.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				CE67067825FF83010074323A /* Session.swift */,
 				CE0C2A992603664400256AA5 /* Shadowed.swift */,
 				CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */,
+				CE0C2AAC26038EDA00256AA5 /* Walking.Segmented.Item.swift */,
+				CE0C2AB02603921C00256AA5 /* Walking.Segmented.Status.swift */,
 				CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */,
 				CE9D770526025EA7000BB7CC /* Walking.swift */,
 				CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */,
@@ -210,6 +216,7 @@
 				CE0C2AA32603728000256AA5 /* Walking.Time.Ring.swift in Sources */,
 				CEB8361E2600EF1D0021BF60 /* Challenge.Metadata.swift in Sources */,
 				CE4180B0260241F50046B18F /* Window.swift in Sources */,
+				CE0C2AAD26038EDA00256AA5 /* Walking.Segmented.Item.swift in Sources */,
 				CE4180B7260245190046B18F /* Detail.swift in Sources */,
 				CE4180B3260242310046B18F /* Session.Section.swift in Sources */,
 				CE9D770626025EA7000BB7CC /* Walking.swift in Sources */,
@@ -224,6 +231,7 @@
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */,
 				CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */,
+				CE0C2AB12603921C00256AA5 /* Walking.Segmented.Status.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,
 				CE67067925FF83010074323A /* Session.swift in Sources */,
 			);

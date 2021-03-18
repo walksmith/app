@@ -1,11 +1,20 @@
 import SwiftUI
+import Smith
 
 struct Walking: View {
     @Binding var session: Session
+    @State private var challenge: Challenge?
     
     var body: some View {
         VStack {
-            Time(session: $session)
+            Segmented(session: $session, challenge: $challenge)
+            Spacer()
+            
+            switch challenge {
+            default:
+                Time(session: $session)
+            }
+            
             Spacer()
             Button {
                 withAnimation(.spring(blendDuration: 0.4)) {
@@ -15,7 +24,7 @@ struct Walking: View {
                 ZStack {
                     Capsule()
                         .fill(LinearGradient(
-                                gradient: .init(colors: [.init(.systemTeal), .blue]),
+                                gradient: .init(colors: [.init(.systemIndigo), .blue]),
                                 startPoint: .leading,
                                 endPoint: .trailing))
                         .modifier(Shadowed())
