@@ -26,9 +26,10 @@ extension Home {
             }
             .padding(.top, 40)
             Text(verbatim: session.player.name)
-                .font(Font.title2)
+                .font(Font.title3)
                 .fontWeight(.medium)
-                .padding()
+                .padding([.horizontal, .bottom])
+                .padding(.top, 5)
                 .id(session.player.name)
         }
     }

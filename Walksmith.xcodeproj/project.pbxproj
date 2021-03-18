@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE045CE72601141A00E72767 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE045CE62601141A00E72767 /* CloudKit.framework */; };
+		CE0C2A9A2603664400256AA5 /* Shadowed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2A992603664400256AA5 /* Shadowed.swift */; };
 		CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23589326023AA700D2BFBB /* Session.Player.swift */; };
 		CE4180B0260241F50046B18F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180AF260241F50046B18F /* Window.swift */; };
 		CE4180B3260242310046B18F /* Session.Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B2260242310046B18F /* Session.Section.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		CE045CE42601140F00E72767 /* Walksmith.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Walksmith.entitlements; sourceTree = "<group>"; };
 		CE045CE62601141A00E72767 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE0C2A992603664400256AA5 /* Shadowed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadowed.swift; sourceTree = "<group>"; };
 		CE23589326023AA700D2BFBB /* Session.Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Player.swift; sourceTree = "<group>"; };
 		CE4180AF260241F50046B18F /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		CE4180B2260242310046B18F /* Session.Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Section.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				CE23589326023AA700D2BFBB /* Session.Player.swift */,
 				CE4180B2260242310046B18F /* Session.Section.swift */,
 				CE67067825FF83010074323A /* Session.swift */,
+				CE0C2A992603664400256AA5 /* Shadowed.swift */,
 				CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */,
 				CE9D770A260265C8000BB7CC /* Walking.Counter.swift */,
 				CE9D770526025EA7000BB7CC /* Walking.swift */,
@@ -206,6 +209,7 @@
 				CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */,
 				CE67067625FF82E00074323A /* Home.swift in Sources */,
 				CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */,
+				CE0C2A9A2603664400256AA5 /* Shadowed.swift in Sources */,
 				CEB836162600E9690021BF60 /* Home.Item.swift in Sources */,
 				CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */,
 				CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */,

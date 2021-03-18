@@ -12,18 +12,19 @@ extension Detail {
             } label: {
                 ZStack {
                     Circle()
-                        .stroke(challenge.background, style: .init(lineWidth: 6))
+                        .stroke(challenge.background, style: .init(lineWidth: 4))
                         .opacity(0.4)
+                        .modifier(Shadowed())
                     ZStack {
                         Circle()
                             .fill(challenge.background)
                         Text("Start")
-                            .font(.callout)
+                            .font(.footnote)
                             .fontWeight(.heavy)
                             .foregroundColor(.white)
-                            .padding(30)
+                            .padding(20)
                     }
-                    .padding(3)
+                    .padding(2)
                 }
                 .fixedSize()
             }

@@ -21,7 +21,7 @@ struct Walking: View {
                                 gradient: .init(colors: [.init(.systemTeal), .blue]),
                                 startPoint: .leading,
                                 endPoint: .trailing))
-                        .shadow(color: Color.primary.opacity(0.4), radius: 4, y: 2)
+                        .modifier(Shadowed())
                     Text("FINISH")
                         .foregroundColor(.white)
                         .font(Font.callout)
@@ -33,7 +33,7 @@ struct Walking: View {
             }
             Button {
                 withAnimation(.spring(blendDuration: 0.4)) {
-                    session.archive.end()
+                    session.archive.cancel()
                 }
             } label: {
                 Text("CANCEL")

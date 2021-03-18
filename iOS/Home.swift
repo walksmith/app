@@ -17,11 +17,16 @@ struct Home: View {
                 } label: {
                     ZStack {
                         Circle()
+                            .fill(LinearGradient(
+                                    gradient: .init(colors: [.blue, .init(.systemIndigo)]),
+                                    startPoint: .top,
+                                    endPoint: .bottom))
+                            .modifier(Shadowed())
                         Image(systemName: "plus")
-                            .font(.largeTitle)
+                            .font(.title2)
                             .foregroundColor(.white)
                     }
-                    .frame(width: 60, height: 60)
+                    .frame(width: 46, height: 46)
                 }
             }
             Spacer()

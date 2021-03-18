@@ -19,10 +19,11 @@ extension Home {
                         HStack {
                             VStack(alignment: .leading) {
                                 Text(challenge.title)
+                                    .font(.callout)
                                     .fontWeight(.heavy)
                                     .fixedSize(horizontal: false, vertical: true)
                                 Text(challenge.subtitle)
-                                    .font(.footnote)
+                                    .font(.caption)
                                     .opacity(0.9)
                             }
                             Spacer()

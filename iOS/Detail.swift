@@ -20,7 +20,7 @@ struct Detail: View {
                         .padding(.leading)
                 }
                 Text(challenge.title)
-                    .font(Font.callout.bold())
+                    .font(Font.footnote.bold())
                 Spacer()
             }
             if session.archive.enrolled(challenge) {
