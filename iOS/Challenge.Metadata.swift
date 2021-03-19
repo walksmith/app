@@ -61,4 +61,8 @@ extension Challenge {
                          endPoint: .bottomTrailing)
         }
     }
+    
+    var leaderboard: String {
+        "walksmith.\(self)"
+    }
 }

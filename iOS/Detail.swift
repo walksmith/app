@@ -22,6 +22,16 @@ struct Detail: View {
                 Text(challenge.title)
                     .font(Font.footnote.bold())
                 Spacer()
+                if session.archive.enrolled(challenge) {
+                    Button {
+                        session.game.leaderboard(challenge)
+                    } label: {
+                        Image(systemName: "star.fill")
+                            .font(.title3)
+                            .foregroundColor(.primary)
+                            .frame(width: 65, height: 50)
+                    }
+                }
             }
             if session.archive.enrolled(challenge) {
                 Spacer()

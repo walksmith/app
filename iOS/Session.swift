@@ -6,6 +6,7 @@ struct Session {
     var archive = Archive()
     var player = Player()
     var section = Section.home
+    let game = Game()
     let dismiss = PassthroughSubject<Void, Never>()
     let components = DateComponentsFormatter()
     let relative = RelativeDateTimeFormatter()
