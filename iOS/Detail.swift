@@ -4,6 +4,7 @@ import Smith
 struct Detail: View {
     @Binding var session: Session
     let challenge: Challenge
+    @State private var leaderboard = false
     
     var body: some View {
         VStack {
@@ -24,12 +25,15 @@ struct Detail: View {
                 Spacer()
                 if session.archive.enrolled(challenge) {
                     Button {
-                        session.game.leaderboard(challenge)
+                        leaderboard = true
                     } label: {
                         Image(systemName: "star.fill")
                             .font(.title3)
                             .foregroundColor(.primary)
                             .frame(width: 65, height: 50)
+                    }
+                    .sheet(isPresented: $leaderboard) {
+                        Leaderboards(session: $session, challenge: challenge)
                     }
                 }
             }
