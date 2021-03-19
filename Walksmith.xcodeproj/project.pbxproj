@@ -26,6 +26,7 @@
 		CE67067E25FF84730074323A /* Home.Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067D25FF84730074323A /* Home.Greet.swift */; };
 		CE67068325FF980C0074323A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67068225FF980C0074323A /* GameKit.framework */; };
 		CE9D770626025EA7000BB7CC /* Walking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D770526025EA7000BB7CC /* Walking.swift */; };
+		CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E86F62604B475003C0D58 /* RelativeDateTimeFormatter.swift */; };
 		CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0F33F25FF7D4C00CFB18C /* App.swift */; };
 		CEA0F34425FF7D4C00CFB18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */; };
 		CEB836122600E1430021BF60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEB836112600E1430021BF60 /* Settings.bundle */; };
@@ -55,6 +56,7 @@
 		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
 		CE67068225FF980C0074323A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE9D770526025EA7000BB7CC /* Walking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.swift; sourceTree = "<group>"; };
+		CE9E86F62604B475003C0D58 /* RelativeDateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeDateTimeFormatter.swift; sourceTree = "<group>"; };
 		CEA0F33C25FF7D4C00CFB18C /* Walksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA0F33F25FF7D4C00CFB18C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CEA0F34325FF7D4C00CFB18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,12 +91,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE9E86F52604B464003C0D58 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E86F62604B475003C0D58 /* RelativeDateTimeFormatter.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		CEA0F33125FF7D3C00CFB18C = {
 			isa = PBXGroup;
 			children = (
+				CE67068125FF980C0074323A /* Frameworks */,
 				CEA0F33E25FF7D4C00CFB18C /* iOS */,
 				CEA0F33D25FF7D4C00CFB18C /* Products */,
-				CE67068125FF980C0074323A /* Frameworks */,
+				CE9E86F52604B464003C0D58 /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,6 +239,7 @@
 				CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */,
 				CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
+				CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */,
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */,
 				CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */,

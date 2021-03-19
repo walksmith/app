@@ -28,7 +28,7 @@ extension Home {
             Text(verbatim: session.player.name)
                 .font(Font.title3)
                 .fontWeight(.medium)
-                .padding([.horizontal, .bottom])
+                .padding(.horizontal)
                 .padding(.top, 5)
                 .id(session.player.name)
         }
