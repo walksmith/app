@@ -7,4 +7,12 @@ struct Session {
     var player = Player()
     var section = Section.home
     let dismiss = PassthroughSubject<Void, Never>()
+    let components = DateComponentsFormatter()
+    let relative = RelativeDateTimeFormatter()
+    
+    init() {
+        components.allowedUnits = [.minute, .second]
+        components.unitsStyle = .positional
+        components.zeroFormattingBehavior = .pad
+    }
 }

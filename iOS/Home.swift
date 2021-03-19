@@ -7,12 +7,7 @@ struct Home: View {
     var body: some View {
         ScrollView {
             Greet(session: $session)
-            Label(session.archive.last == nil
-                    ? "New player"
-                    : RelativeDateTimeFormatter().string(from: session.archive.last!, to: .init()), systemImage: "figure.walk")
-                .foregroundColor(.secondary)
-                .font(.callout)
-                .padding(.horizontal)
+                .padding(.top, 40)
             Button {
                 withAnimation(.spring(blendDuration: 0.4)) {
                     session.archive.start()

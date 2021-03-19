@@ -6,7 +6,6 @@ extension Walking {
         @State private var duration = 0
         @State private var indicator = 0
         @State private var counter = ""
-        @State private var formatter = DateComponentsFormatter()
         private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
         
         var body: some View {
@@ -20,11 +19,6 @@ extension Walking {
                         .font(.title2)
                     Text(verbatim: counter)
                         .font(Font.callout.bold().monospacedDigit())
-                        .onAppear {
-                            formatter.allowedUnits = [.hour, .minute, .second]
-                            formatter.unitsStyle = .positional
-                            formatter.zeroFormattingBehavior = .dropLeading
-                        }
                 }
                 .foregroundColor(.black)
             }
@@ -34,7 +28,7 @@ extension Walking {
                     withAnimation(.easeInOut(duration: 1)) {
                         self.indicator = .init(duration.truncatingRemainder(dividingBy: 60))
                     }
-                    counter = formatter.string(from: duration) ?? ""
+                    counter = session.components.string(from: duration) ?? ""
                 }
             }
         }

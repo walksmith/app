@@ -5,6 +5,7 @@ extension Session {
     enum Section {
         case
         home,
+        listed,
         challenge(Challenge)
     }
 }
