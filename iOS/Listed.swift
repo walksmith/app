@@ -1,9 +1,7 @@
 import SwiftUI
-import Smith
 
 struct Listed: View {
     @Binding var session: Session
-    @State private var items = [Walk.Listed]()
     
     var body: some View {
         VStack(spacing: 0) {
@@ -27,25 +25,22 @@ struct Listed: View {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color(.secondarySystemBackground))
                 ScrollView {
-                    Spacer()
-                        .frame(height: 16)
-                    ForEach(0 ..< items.count, id: \.self) {
-                        if $0 > 0 {
+                    VStack(spacing: 0) {
+                        Spacer()
+                            .frame(height: 10)
+                        ForEach(session.archive.list, id: \.self) {
+                            Item(session: $session, item: $0)
                             Rectangle()
                                 .fill(Color(.tertiarySystemBackground))
                                 .frame(height: 1)
                                 .padding(.horizontal)
                         }
-                        Item(session: $session, item: items[$0])
+                        Spacer()
+                            .frame(height: 20)
                     }
-                    Spacer()
-                        .frame(height: 20)
                 }
             }
             .padding([.horizontal, .bottom])
-        }
-        .onAppear {
-            items = session.archive.list
         }
     }
 }
