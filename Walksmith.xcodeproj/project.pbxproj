@@ -38,6 +38,8 @@
 		CEB836122600E1430021BF60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEB836112600E1430021BF60 /* Settings.bundle */; };
 		CEB836162600E9690021BF60 /* Home.Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB836152600E9690021BF60 /* Home.Item.swift */; };
 		CEB8361E2600EF1D0021BF60 /* Challenge.Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */; };
+		CEBB7B3326062C56007A2AF6 /* Detail.Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7B3226062C56007A2AF6 /* Detail.Streak.swift */; };
+		CEBB7B372606301E007A2AF6 /* Detail.Streak.Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +78,8 @@
 		CEB836112600E1430021BF60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CEB836152600E9690021BF60 /* Home.Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Item.swift; sourceTree = "<group>"; };
 		CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.Metadata.swift; sourceTree = "<group>"; };
+		CEBB7B3226062C56007A2AF6 /* Detail.Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Streak.swift; sourceTree = "<group>"; };
+		CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Streak.Header.swift; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +143,8 @@
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
 				CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */,
 				CE4180BA26024A0F0046B18F /* Detail.Start.swift */,
+				CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */,
+				CEBB7B3226062C56007A2AF6 /* Detail.Streak.swift */,
 				CE4180B6260245190046B18F /* Detail.swift */,
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
 				CE67067D25FF84730074323A /* Home.Greet.swift */,
@@ -249,6 +255,7 @@
 				CE4180B7260245190046B18F /* Detail.swift in Sources */,
 				CE4180B3260242310046B18F /* Session.Section.swift in Sources */,
 				CE9D770626025EA7000BB7CC /* Walking.swift in Sources */,
+				CEBB7B3326062C56007A2AF6 /* Detail.Streak.swift in Sources */,
 				CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */,
 				CE67067625FF82E00074323A /* Home.swift in Sources */,
 				CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */,
@@ -260,6 +267,7 @@
 				CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
 				CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */,
+				CEBB7B372606301E007A2AF6 /* Detail.Streak.Header.swift in Sources */,
 				CE352A9E2604F25C0081311F /* Leaderboards.Coordinator.swift in Sources */,
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */,

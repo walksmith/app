@@ -12,7 +12,7 @@ extension Home.Item {
             Text("Current")
                 .font(.caption2)
                 .onAppear {
-                    count = session.decimal.string(from: NSNumber(value: session.archive.streak.current))!
+                    count = session.decimal.string(from: NSNumber(value: session.archive.calendar.streak.current))!
                 }
         }
     }

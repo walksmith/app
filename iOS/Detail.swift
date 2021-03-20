@@ -7,7 +7,7 @@ struct Detail: View {
     @State private var leaderboard = false
     
     var body: some View {
-        VStack {
+        ScrollView {
             HStack {
                 Button {
                     withAnimation(.spring(blendDuration: 0.3)) {
@@ -22,6 +22,7 @@ struct Detail: View {
                 }
                 Text(challenge.title)
                     .font(Font.footnote.bold())
+                    .fixedSize(horizontal: false, vertical: true)
                 Spacer()
                 if session.archive.enrolled(challenge) {
                     Button {
@@ -38,11 +39,19 @@ struct Detail: View {
                 }
             }
             if session.archive.enrolled(challenge) {
-                Spacer()
+                switch challenge {
+                case .streak:
+                    Streak(session: $session)
+                case .steps:
+                    Text("")
+                case .distance:
+                    Text("")
+                case .map:
+                    Text("")
+                }
             } else {
-                Spacer()
                 Start(session: $session, challenge: challenge)
-                Spacer()
+                    .padding(.top, 150)
             }
         }
     }
