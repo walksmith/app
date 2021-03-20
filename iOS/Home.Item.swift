@@ -31,7 +31,18 @@ extension Home {
                                 .font(.title)
                         }
                         if session.archive.enrolled(challenge) {
-                            //Text("Overview")
+                            Spacer()
+                                .frame(height: 20)
+                            switch challenge {
+                            case .streak:
+                                Streak(session: $session)
+                            case .steps:
+                                Text("")
+                            case .distance:
+                                Text("")
+                            case .map:
+                                Text("")
+                            }
                         }
                     }
                     .padding()

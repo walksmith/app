@@ -23,12 +23,4 @@ final class Game {
             UIApplication.shared.present(controller)
         }
     }
-    
-    func leaderboard(_ challenge: Challenge) {
-        GKAccessPoint.shared.trigger(state: .leaderboards) {
-        }
-//        let controller = GKGameCenterViewController(leaderboardID: challenge.leaderboard, playerScope: .global, timeScope: .allTime)
-//        controller.delegate = UIApplication.shared
-//        UIApplication.shared.present(controller)
-    }
 }
