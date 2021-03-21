@@ -8,13 +8,12 @@ extension Detail {
         @State private var streak = Smith.Streak.zero
         
         var body: some View {
+            Header(session: $session, streak: streak)
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color(.secondarySystemBackground))
-                VStack {
-                    Header(session: $session, streak: streak)
-                }
-                .padding()
+                Ephemeris(session: $session, calendar: calendar)
+                    .padding()
             }
             .padding(.horizontal)
             .onAppear {
