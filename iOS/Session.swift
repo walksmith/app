@@ -10,12 +10,15 @@ struct Session {
     let dismiss = PassthroughSubject<Void, Never>()
     let components = DateComponentsFormatter()
     let relative = RelativeDateTimeFormatter()
+    let monther = DateFormatter()
     let decimal = NumberFormatter()
     
     init() {
         components.allowedUnits = [.minute, .second]
         components.unitsStyle = .positional
         components.zeroFormattingBehavior = .pad
+        
+        monther.dateFormat = "MMMM"
         
         decimal.numberStyle = .decimal
     }

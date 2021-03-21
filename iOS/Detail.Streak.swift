@@ -9,16 +9,21 @@ extension Detail {
         
         var body: some View {
             Header(session: $session, streak: streak)
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(.secondarySystemBackground))
-                Ephemeris(session: $session, calendar: calendar)
+                .onAppear {
+                    calendar = session.archive.calendar
+                    streak = calendar.streak
+                }
+            if calendar.isEmpty {
+                Image(systemName: "figure.walk")
+                    .font(.largeTitle)
+                    .padding(.top, 150)
+                Text("Ready for your first walk")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal)
+            } else {
+                Ephemeris(session: $session, year: calendar.count - 1, month: calendar.last!.months.count - 1, years: calendar)
                     .padding()
-            }
-            .padding(.horizontal)
-            .onAppear {
-                calendar = session.archive.calendar
-                streak = calendar.streak
             }
         }
     }
