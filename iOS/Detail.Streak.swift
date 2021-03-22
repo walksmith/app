@@ -17,10 +17,6 @@ extension Detail {
                 Image(systemName: "figure.walk")
                     .font(.largeTitle)
                     .padding(.top, 150)
-                Text("Ready for your first walk")
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
-                    .padding(.horizontal)
             } else {
                 Ephemeris(session: $session, year: calendar.count - 1, month: calendar.last!.months.count - 1, years: calendar)
                     .padding()
