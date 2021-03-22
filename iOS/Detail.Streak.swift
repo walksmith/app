@@ -13,13 +13,13 @@ extension Detail {
                     calendar = session.archive.calendar
                     streak = calendar.streak
                 }
-            if calendar.isEmpty {
+            if let year = calendar.last {
+                Ephemeris(session: $session, month: year.months.count - 1, year: year)
+                    .padding()
+            } else {
                 Image(systemName: "figure.walk")
                     .font(.largeTitle)
                     .padding(.top, 150)
-            } else {
-                Ephemeris(session: $session, year: calendar.count - 1, month: calendar.last!.months.count - 1, years: calendar)
-                    .padding()
             }
         }
     }
