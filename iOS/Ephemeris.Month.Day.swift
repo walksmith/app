@@ -7,6 +7,7 @@ extension Ephemeris.Month {
         var body: some View {
             ZStack {
                 Text("\(index)")
+                    .font(.caption)
             }
             .frame(width: Metrics.calendar.day.size, height: Metrics.calendar.day.size)
         }
