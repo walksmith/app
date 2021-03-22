@@ -15,7 +15,7 @@ extension Detail {
                 }
             if let year = calendar.last {
                 Ephemeris(session: $session, month: year.months.count - 1, year: year)
-                    .padding()
+                    .padding(.vertical)
             } else {
                 Image(systemName: "figure.walk")
                     .font(.largeTitle)

@@ -11,6 +11,7 @@ struct Session {
     let components = DateComponentsFormatter()
     let relative = RelativeDateTimeFormatter()
     let monther = DateFormatter()
+    let weeker = DateFormatter()
     let decimal = NumberFormatter()
     
     init() {
@@ -19,6 +20,7 @@ struct Session {
         components.zeroFormattingBehavior = .pad
         
         monther.dateFormat = "MMMM"
+        weeker.dateFormat = "E"
         
         decimal.numberStyle = .decimal
     }

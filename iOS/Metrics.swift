@@ -6,4 +6,10 @@ struct Metrics {
             static let width = CGFloat(100)
         }
     }
+    
+    struct calendar {
+        struct day {
+            static let size = CGFloat(45)
+        }
+    }
 }

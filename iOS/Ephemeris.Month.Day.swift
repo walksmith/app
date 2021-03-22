@@ -8,7 +8,7 @@ extension Ephemeris.Month {
             ZStack {
                 Text("\(index)")
             }
-            .frame(width: 40, height: 40)
+            .frame(width: Metrics.calendar.day.size, height: Metrics.calendar.day.size)
         }
     }
 }
