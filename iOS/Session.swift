@@ -20,7 +20,7 @@ struct Session {
         components.zeroFormattingBehavior = .pad
         
         monther.dateFormat = "MMMM"
-        weeker.dateFormat = "E"
+        weeker.dateFormat = "EEEEE"
         
         decimal.numberStyle = .decimal
     }

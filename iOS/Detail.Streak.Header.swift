@@ -20,9 +20,9 @@ extension Detail.Streak {
             .padding(.top, 10)
             .padding(.bottom, 1)
             HStack {
-                Text("CURRENT")
-                    .frame(width: Metrics.streak.header.width)
                 Text("MAX")
+                    .frame(width: Metrics.streak.header.width)
+                Text("CURRENT")
                     .frame(width: Metrics.streak.header.width)
                 Text("TODAY")
                     .frame(width: Metrics.streak.header.width)

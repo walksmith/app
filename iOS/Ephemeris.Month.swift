@@ -5,12 +5,14 @@ extension Ephemeris {
     struct Month: View {
         @Binding var session: Session
         let month: Year.Month
+        let previous: Bool
+        let next: Bool
         
         var body: some View {
-            ForEach(month.days, id: \.self) { week in
+            ForEach(0 ..< month.days.count, id: \.self) { week in
                 HStack(spacing: 0) {
-                    ForEach(week, id: \.self) {
-                        Day(index: $0.value)
+                    ForEach(0 ..< month.days[week].count, id: \.self) {
+                        Day(index: month.days[week][$0].value, continouos: continouos(week, $0))
                     }
                 }
                 .padding(.leading, leading(week))
@@ -18,18 +20,46 @@ extension Ephemeris {
             }
         }
         
-        private func leading(_ week: [Year.Month.Day]) -> CGFloat {
+        private func leading(_ week: Int) -> CGFloat {
             .init(Calendar.current.component(
                     .weekday,
                     from: Calendar.current.date(
-                        from: .init(year: 2021, month: month.value, day: week.first!.value))!) - 1) * Metrics.calendar.day.size
+                        from: .init(year: 2021, month: month.value, day: month.days[week].first!.value))!) - 1) * Metrics.calendar.day.size
         }
         
-        private func trailing(_ week: [Year.Month.Day]) -> CGFloat {
+        private func trailing(_ week: Int) -> CGFloat {
             .init(7 - Calendar.current.component(
                     .weekday,
                     from: Calendar.current.date(
-                        from: .init(year: 2021, month: month.value, day: week.last!.value))!)) * Metrics.calendar.day.size
+                        from: .init(year: 2021, month: month.value, day: month.days[week].last!.value))!)) * Metrics.calendar.day.size
+        }
+        
+        private func continouos(_ week: Int, _ day: Int) -> Continuous {
+            month.days[week][day].hit
+                ? previous(week, day)
+                    ? next(week, day)
+                        ? .middle
+                        : .trailing
+                    : next(week, day)
+                        ? .leading
+                        : .single
+                : .none
+        }
+        
+        private func previous(_ week: Int, _ day: Int) -> Bool {
+            day > 0
+                ? month.days[week][day - 1].hit
+                : week > 0
+                    ? month.days[week - 1].last!.hit
+                    : previous
+        }
+        
+        private func next(_ week: Int, _ day: Int) -> Bool {
+            day < month.days[week].count - 1
+                ? month.days[week][day + 1].hit
+                : week < month.days.count - 1
+                    ? month.days[week + 1].first!.hit
+                    : next
         }
     }
 }

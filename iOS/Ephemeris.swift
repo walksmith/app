@@ -8,7 +8,7 @@ struct Ephemeris: View {
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: 12)
                 .fill(Color(.secondarySystemBackground))
             VStack(spacing: 0) {
                 HStack {
@@ -35,15 +35,16 @@ struct Ephemeris: View {
                 HStack(spacing: 0) {
                     ForEach(1 ..< 8) {
                         Text(verbatim: session.weeker.string(from: Calendar.current.date(from: .init(weekday: $0, weekOfMonth: 1))!))
-                            .font(.caption2)
-                            .foregroundColor(.secondary)
                             .frame(width: Metrics.calendar.day.size)
                     }
                 }
+                .font(.footnote)
+                .foregroundColor(.pink)
                 .padding(.vertical)
-                ForEach(year.months, id: \.self) {
-                    Month(session: $session, month: $0)
-                }
+                Month(session: $session, month: year.months[month],
+                      previous: month > 0 && year.months[month - 1].days.last!.last!.hit,
+                      next: month < year.months.count - 1 && year.months[month + 1].days.first!.first!.hit)
+                    .font(.footnote)
             }
             .padding(10)
         }

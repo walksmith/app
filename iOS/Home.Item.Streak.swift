@@ -3,17 +3,19 @@ import SwiftUI
 extension Home.Item {
     struct Streak: View {
         @Binding var session: Session
-        @State private var count = ""
         
         var body: some View {
-            Text(verbatim: count)
-                .font(.callout)
-                .fontWeight(.medium)
-            Text("Current")
-                .font(.caption2)
-                .onAppear {
-                    count = session.decimal.string(from: NSNumber(value: session.archive.calendar.streak.current))!
-                }
+            HStack {
+                Text("Today")
+                    .font(.footnote)
+                Image(systemName: today ? "checkmark.circle.fill" : "slash.circle")
+                    .font(.title2)
+            }
+            .foregroundColor(today ? .white : .init(white: 1, opacity: 0.6))
+        }
+        
+        private var today: Bool {
+            session.archive.last != nil && Calendar.current.isDate(session.archive.last!.start, inSameDayAs: .init())
         }
     }
 }
