@@ -24,6 +24,7 @@
 		CE352A962604E1B30081311F /* Listed.Item.Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A952604E1B30081311F /* Listed.Item.Bar.swift */; };
 		CE352A9B2604F2380081311F /* Leaderboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A9A2604F2380081311F /* Leaderboards.swift */; };
 		CE352A9E2604F25C0081311F /* Leaderboards.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A9D2604F25C0081311F /* Leaderboards.Coordinator.swift */; };
+		CE3BA8E5260A12BF004DFC3E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3BA8E4260A12BF004DFC3E /* HealthKit.framework */; };
 		CE4180B0260241F50046B18F /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180AF260241F50046B18F /* Window.swift */; };
 		CE4180B3260242310046B18F /* Session.Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B2260242310046B18F /* Session.Section.swift */; };
 		CE4180B7260245190046B18F /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B6260245190046B18F /* Detail.swift */; };
@@ -68,6 +69,7 @@
 		CE352A952604E1B30081311F /* Listed.Item.Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listed.Item.Bar.swift; sourceTree = "<group>"; };
 		CE352A9A2604F2380081311F /* Leaderboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboards.swift; sourceTree = "<group>"; };
 		CE352A9D2604F25C0081311F /* Leaderboards.Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboards.Coordinator.swift; sourceTree = "<group>"; };
+		CE3BA8E4260A12BF004DFC3E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE4180AF260241F50046B18F /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		CE4180B2260242310046B18F /* Session.Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Section.swift; sourceTree = "<group>"; };
 		CE4180B6260245190046B18F /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE66B402260218C000609850 /* Smith in Frameworks */,
+				CE3BA8E5260A12BF004DFC3E /* HealthKit.framework in Frameworks */,
 				CE67068325FF980C0074323A /* GameKit.framework in Frameworks */,
 				CE045CE72601141A00E72767 /* CloudKit.framework in Frameworks */,
 			);
@@ -111,6 +114,7 @@
 		CE67068125FF980C0074323A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE3BA8E4260A12BF004DFC3E /* HealthKit.framework */,
 				CE045CE62601141A00E72767 /* CloudKit.framework */,
 				CE67068225FF980C0074323A /* GameKit.framework */,
 			);
