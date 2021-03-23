@@ -13,8 +13,8 @@ extension Detail.Streak {
                 Text(verbatim: session.decimal.string(from: NSNumber(value: streak.current))!)
                     .frame(width: Metrics.streak.header.width)
                 Image(systemName: today ? "checkmark.circle.fill" : "slash.circle")
-                    .font(.largeTitle)
-                    .foregroundColor(today ? .primary : .secondary)
+                    .font(.title2)
+                    .foregroundColor(today ? .primary : .init(.tertiaryLabel))
                     .frame(width: Metrics.streak.header.width)
             }
             .padding(.top, 10)

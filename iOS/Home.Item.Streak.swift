@@ -9,9 +9,9 @@ extension Home.Item {
                 Text("Today")
                     .font(.footnote)
                 Image(systemName: today ? "checkmark.circle.fill" : "slash.circle")
-                    .font(.title2)
+                    .font(.title3)
             }
-            .foregroundColor(today ? .white : .init(white: 1, opacity: 0.6))
+            .foregroundColor(today ? .white : .init(white: 1, opacity: 0.4))
         }
         
         private var today: Bool {
