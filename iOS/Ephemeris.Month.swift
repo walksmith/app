@@ -21,17 +21,15 @@ extension Ephemeris {
         }
         
         private func leading(_ week: Int) -> CGFloat {
-            .init(Calendar.current.component(
-                    .weekday,
-                    from: Calendar.current.date(
-                        from: .init(year: 2021, month: month.value, day: month.days[week].first!.value))!) - 1) * Metrics.calendar.day.size
+            .init(Calendar.current
+                    .leadingWeekdays(year: 2021, month: month.value, day: month.days[week].first!.value))
+                * Metrics.calendar.day.size
         }
         
         private func trailing(_ week: Int) -> CGFloat {
-            .init(7 - Calendar.current.component(
-                    .weekday,
-                    from: Calendar.current.date(
-                        from: .init(year: 2021, month: month.value, day: month.days[week].last!.value))!)) * Metrics.calendar.day.size
+            .init(Calendar.current
+                    .trailingWeekdays(year: 2021, month: month.value, day: month.days[week].last!.value))
+                * Metrics.calendar.day.size
         }
         
         private func continouos(_ week: Int, _ day: Int) -> Continuous {

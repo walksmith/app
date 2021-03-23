@@ -33,8 +33,12 @@ struct Ephemeris: View {
                     .disabled(month == year.months.count - 1)
                 }
                 HStack(spacing: 0) {
-                    ForEach(1 ..< 8) {
-                        Text(verbatim: session.weeker.string(from: Calendar.current.date(from: .init(weekday: $0, weekOfMonth: 1))!))
+                    ForEach(0 ..< 7) {
+                        Text(verbatim: session.weeker.string(
+                                from: Calendar.current.date(
+                                    from: .init(
+                                        weekday: $0 + Calendar.current.firstWeekday % 7,
+                                        weekOfMonth: 1))!))
                             .frame(width: Metrics.calendar.day.size)
                     }
                 }
