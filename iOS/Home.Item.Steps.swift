@@ -7,9 +7,10 @@ extension Home.Item {
         
         var body: some View {
             HStack {
+                Text("Max")
+                    .font(.footnote)
                 Text(NSNumber(value: count), formatter: session.decimal)
-                Image(systemName: "speedometer")
-                    .font(.title3)
+                    .font(Font.title3.bold())
             }
             .onAppear {
                 count = session.archive.steps
