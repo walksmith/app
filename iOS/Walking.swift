@@ -19,6 +19,12 @@ struct Walking: View {
             Button {
                 withAnimation(.spring(blendDuration: 0.3)) {
                     session.archive.end()
+                    
+                    DispatchQueue.global(qos: .utility).async {
+                        if session.archive.enrolled(.streak) {
+                            session.game.streak(session.archive.calendar.streak)
+                        }
+                    }
                 }
             } label: {
                 ZStack {

@@ -23,4 +23,13 @@ final class Game {
             UIApplication.shared.present(controller)
         }
     }
+    
+    func streak(_ streak: Streak) {
+        guard GKLocalPlayer.local.isAuthenticated else { return }
+        GKLeaderboard.submitScore(
+            streak.current,
+            context: 0,
+            player: GKLocalPlayer.local,
+            leaderboardIDs: [Challenge.streak.leaderboard]) { _ in }
+    }
 }

@@ -27,7 +27,7 @@ struct Listed: View {
                 ScrollView {
                     VStack(spacing: 0) {
                         Spacer()
-                            .frame(height: 10)
+                            .frame(height: 5)
                         ForEach(session.archive.list, id: \.self) {
                             Item(session: $session, item: $0)
                             Rectangle()
@@ -36,7 +36,7 @@ struct Listed: View {
                                 .padding(.horizontal)
                         }
                         Spacer()
-                            .frame(height: 20)
+                            .frame(height: 5)
                     }
                 }
             }
