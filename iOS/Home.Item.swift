@@ -37,7 +37,7 @@ extension Home {
                             case .streak:
                                 Streak(session: $session)
                             case .steps:
-                                Text("")
+                                Steps(session: $session)
                             case .distance:
                                 Text("")
                             case .map:

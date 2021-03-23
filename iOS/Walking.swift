@@ -1,9 +1,11 @@
 import SwiftUI
+import Combine
 import Smith
 
 struct Walking: View {
     @Binding var session: Session
     @State private var challenge: Challenge?
+    @State private var disabled = false
     
     var body: some View {
         VStack {
@@ -11,13 +13,32 @@ struct Walking: View {
             Spacer()
             
             switch challenge {
+            case .streak:
+                Streak(session: $session)
+            case .steps:
+                Steps(session: $session)
             default:
                 Time(session: $session)
             }
             
             Spacer()
             Button {
-                session.health.query(session.archive, .steps, session.archive.last!.start)
+                disabled = true
+                var sub: AnyCancellable?
+                sub = session.health.query(session.archive, .steps).receive(on: DispatchQueue.main).sink { steps in
+                    withAnimation(.spring(blendDuration: 0.3)) {
+                        session.archive.end(steps: steps)
+                        DispatchQueue.global(qos: .utility).async {
+                            if session.archive.enrolled(.streak) {
+                                session.game.submit(.streak, session.archive.calendar.streak.current)
+                            }
+                            if session.archive.enrolled(.steps) {
+                                session.game.submit(.steps, steps)
+                            }
+                        }
+                    }
+                    sub?.cancel()
+                }
             } label: {
                 ZStack {
                     Capsule()
@@ -35,6 +56,7 @@ struct Walking: View {
                 }
                 .fixedSize()
             }
+            .disabled(disabled)
             Button {
                 withAnimation(.spring(blendDuration: 0.3)) {
                     session.archive.cancel()
@@ -45,25 +67,9 @@ struct Walking: View {
                     .font(.caption)
                     .frame(width: 300, height: 34)
             }
+            .disabled(disabled)
             .padding(.top, 10)
             .padding(.bottom)
-        }
-        .onReceive(session.health.result.receive(on: DispatchQueue.main)) { result in
-            switch result.0 {
-            case .steps:
-                withAnimation(.spring(blendDuration: 0.3)) {
-                    session.archive.end(steps: result.1)
-                    DispatchQueue.global(qos: .utility).async {
-                        if session.archive.enrolled(.streak) {
-                            session.game.submit(.streak, session.archive.calendar.streak.current)
-                        }
-                        if session.archive.enrolled(.steps) {
-                            session.game.submit(.steps, session.archive.steps)
-                        }
-                    }
-                }
-            default: break
-            }
         }
     }
 }

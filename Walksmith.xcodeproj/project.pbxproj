@@ -48,6 +48,9 @@
 		CEC67C86260A26F80036EBF3 /* Detail.Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C85260A26F80036EBF3 /* Detail.Stop.swift */; };
 		CEC67C8A260A29780036EBF3 /* Detail.Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C89260A29780036EBF3 /* Detail.Steps.swift */; };
 		CEC67C8F260A2C180036EBF3 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C8E260A2C180036EBF3 /* Health.swift */; };
+		CED81BCC260A606B003AB46C /* Walking.Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED81BCB260A606B003AB46C /* Walking.Streak.swift */; };
+		CED81BD0260A6576003AB46C /* Walking.Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED81BCF260A6576003AB46C /* Walking.Steps.swift */; };
+		CED81BD4260A66EF003AB46C /* Home.Item.Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED81BD3260A66EF003AB46C /* Home.Item.Steps.swift */; };
 		CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
@@ -97,6 +100,9 @@
 		CEC67C85260A26F80036EBF3 /* Detail.Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Stop.swift; sourceTree = "<group>"; };
 		CEC67C89260A29780036EBF3 /* Detail.Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Steps.swift; sourceTree = "<group>"; };
 		CEC67C8E260A2C180036EBF3 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
+		CED81BCB260A606B003AB46C /* Walking.Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Streak.swift; sourceTree = "<group>"; };
+		CED81BCF260A6576003AB46C /* Walking.Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Steps.swift; sourceTree = "<group>"; };
+		CED81BD3260A66EF003AB46C /* Home.Item.Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Item.Steps.swift; sourceTree = "<group>"; };
 		CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.Day.swift; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
 				CEC67C8E260A2C180036EBF3 /* Health.swift */,
 				CE67067D25FF84730074323A /* Home.Greet.swift */,
+				CED81BD3260A66EF003AB46C /* Home.Item.Steps.swift */,
 				CE2491152606163F00B3E741 /* Home.Item.Streak.swift */,
 				CEB836152600E9690021BF60 /* Home.Item.swift */,
 				CE67067525FF82E00074323A /* Home.swift */,
@@ -192,6 +199,8 @@
 				CE0C2AAC26038EDA00256AA5 /* Walking.Segmented.Item.swift */,
 				CE0C2AB02603921C00256AA5 /* Walking.Segmented.Status.swift */,
 				CE0C2AA726038CC600256AA5 /* Walking.Segmented.swift */,
+				CED81BCF260A6576003AB46C /* Walking.Steps.swift */,
+				CED81BCB260A606B003AB46C /* Walking.Streak.swift */,
 				CE9D770526025EA7000BB7CC /* Walking.swift */,
 				CE0C2AA22603728000256AA5 /* Walking.Time.Ring.swift */,
 				CE0C2A9D26036BF300256AA5 /* Walking.Time.swift */,
@@ -286,6 +295,7 @@
 				CE9D770626025EA7000BB7CC /* Walking.swift in Sources */,
 				CEBB7B3326062C56007A2AF6 /* Detail.Streak.swift in Sources */,
 				CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */,
+				CED81BD4260A66EF003AB46C /* Home.Item.Steps.swift in Sources */,
 				CE67067625FF82E00074323A /* Home.swift in Sources */,
 				CE16C76926075B600049004F /* Ephemeris.swift in Sources */,
 				CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */,
@@ -297,6 +307,7 @@
 				CE352A912604D4730081311F /* Listed.Item.swift in Sources */,
 				CE713A482608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift in Sources */,
 				CE16C7702607648A0049004F /* Ephemeris.Month.swift in Sources */,
+				CED81BCC260A606B003AB46C /* Walking.Streak.swift in Sources */,
 				CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */,
 				CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
@@ -307,6 +318,7 @@
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */,
 				CE352A962604E1B30081311F /* Listed.Item.Bar.swift in Sources */,
+				CED81BD0260A6576003AB46C /* Walking.Steps.swift in Sources */,
 				CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */,
 				CE0C2AB12603921C00256AA5 /* Walking.Segmented.Status.swift in Sources */,
 				CE352A8E2604D2230081311F /* Listed.swift in Sources */,

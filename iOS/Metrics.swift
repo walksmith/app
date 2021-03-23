@@ -5,6 +5,10 @@ struct Metrics {
         struct header {
             static let width = CGFloat(100)
         }
+        
+        struct walking {
+            static let width = CGFloat(150)
+        }
     }
     
     struct calendar {
