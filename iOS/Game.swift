@@ -24,12 +24,12 @@ final class Game {
         }
     }
     
-    func streak(_ streak: Streak) {
+    func submit(_ challenge: Challenge, _ value: Int) {
         guard GKLocalPlayer.local.isAuthenticated else { return }
         GKLeaderboard.submitScore(
-            streak.current,
+            value,
             context: 0,
             player: GKLocalPlayer.local,
-            leaderboardIDs: [Challenge.streak.leaderboard]) { _ in }
+            leaderboardIDs: [challenge.leaderboard]) { _ in }
     }
 }

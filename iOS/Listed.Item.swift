@@ -5,14 +5,12 @@ extension Listed {
     struct Item: View {
         @Binding var session: Session
         let item: Walk.Listed
-        @State private var date = " "
-        @State private var duration = " "
         @State private var percent = CGFloat()
         
         var body: some View {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(verbatim: session.relative.string(from: item.date, to: .init()))
+                    Text(item.date, formatter: session.relative)
                     Text(verbatim: session.components.string(from: item.duration) ?? "")
                         .foregroundColor(.secondary)
                 }

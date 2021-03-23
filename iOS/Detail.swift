@@ -43,12 +43,15 @@ struct Detail: View {
                 case .streak:
                     Streak(session: $session)
                 case .steps:
-                    Text("")
+                    Steps(session: $session)
                 case .distance:
                     Text("")
                 case .map:
                     Text("")
                 }
+                Stop(session: $session, challenge: challenge)
+                    .padding(.top, 50)
+                    .padding(.bottom)
             } else {
                 Start(session: $session, challenge: challenge)
                     .padding(.top, 150)

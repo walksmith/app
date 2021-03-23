@@ -17,15 +17,7 @@ struct Walking: View {
             
             Spacer()
             Button {
-                withAnimation(.spring(blendDuration: 0.3)) {
-                    session.archive.end()
-                    
-                    DispatchQueue.global(qos: .utility).async {
-                        if session.archive.enrolled(.streak) {
-                            session.game.streak(session.archive.calendar.streak)
-                        }
-                    }
-                }
+                session.health.query(session.archive, .steps, session.archive.last!.start)
             } label: {
                 ZStack {
                     Capsule()
@@ -55,6 +47,23 @@ struct Walking: View {
             }
             .padding(.top, 10)
             .padding(.bottom)
+        }
+        .onReceive(session.health.result.receive(on: DispatchQueue.main)) { result in
+            switch result.0 {
+            case .steps:
+                withAnimation(.spring(blendDuration: 0.3)) {
+                    session.archive.end(steps: result.1)
+                    DispatchQueue.global(qos: .utility).async {
+                        if session.archive.enrolled(.streak) {
+                            session.game.submit(.streak, session.archive.calendar.streak.current)
+                        }
+                        if session.archive.enrolled(.steps) {
+                            session.game.submit(.steps, session.archive.steps)
+                        }
+                    }
+                }
+            default: break
+            }
         }
     }
 }

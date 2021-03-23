@@ -45,6 +45,9 @@
 		CEB8361E2600EF1D0021BF60 /* Challenge.Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */; };
 		CEBB7B3326062C56007A2AF6 /* Detail.Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7B3226062C56007A2AF6 /* Detail.Streak.swift */; };
 		CEBB7B372606301E007A2AF6 /* Detail.Streak.Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */; };
+		CEC67C86260A26F80036EBF3 /* Detail.Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C85260A26F80036EBF3 /* Detail.Stop.swift */; };
+		CEC67C8A260A29780036EBF3 /* Detail.Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C89260A29780036EBF3 /* Detail.Steps.swift */; };
+		CEC67C8F260A2C180036EBF3 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C8E260A2C180036EBF3 /* Health.swift */; };
 		CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
@@ -91,6 +94,9 @@
 		CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.Metadata.swift; sourceTree = "<group>"; };
 		CEBB7B3226062C56007A2AF6 /* Detail.Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Streak.swift; sourceTree = "<group>"; };
 		CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Streak.Header.swift; sourceTree = "<group>"; };
+		CEC67C85260A26F80036EBF3 /* Detail.Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Stop.swift; sourceTree = "<group>"; };
+		CEC67C89260A29780036EBF3 /* Detail.Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Steps.swift; sourceTree = "<group>"; };
+		CEC67C8E260A2C180036EBF3 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.Day.swift; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
 				CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */,
 				CE4180BA26024A0F0046B18F /* Detail.Start.swift */,
+				CEC67C89260A29780036EBF3 /* Detail.Steps.swift */,
+				CEC67C85260A26F80036EBF3 /* Detail.Stop.swift */,
 				CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */,
 				CEBB7B3226062C56007A2AF6 /* Detail.Streak.swift */,
 				CE4180B6260245190046B18F /* Detail.swift */,
@@ -165,6 +173,7 @@
 				CE16C76F2607648A0049004F /* Ephemeris.Month.swift */,
 				CE16C76826075B600049004F /* Ephemeris.swift */,
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
+				CEC67C8E260A2C180036EBF3 /* Health.swift */,
 				CE67067D25FF84730074323A /* Home.Greet.swift */,
 				CE2491152606163F00B3E741 /* Home.Item.Streak.swift */,
 				CEB836152600E9690021BF60 /* Home.Item.swift */,
@@ -272,6 +281,7 @@
 				CE4180B0260241F50046B18F /* Window.swift in Sources */,
 				CE0C2AAD26038EDA00256AA5 /* Walking.Segmented.Item.swift in Sources */,
 				CE4180B7260245190046B18F /* Detail.swift in Sources */,
+				CEC67C8F260A2C180036EBF3 /* Health.swift in Sources */,
 				CE4180B3260242310046B18F /* Session.Section.swift in Sources */,
 				CE9D770626025EA7000BB7CC /* Walking.swift in Sources */,
 				CEBB7B3326062C56007A2AF6 /* Detail.Streak.swift in Sources */,
@@ -290,6 +300,7 @@
 				CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */,
 				CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,
+				CEC67C8A260A29780036EBF3 /* Detail.Steps.swift in Sources */,
 				CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */,
 				CEBB7B372606301E007A2AF6 /* Detail.Streak.Header.swift in Sources */,
 				CE352A9E2604F25C0081311F /* Leaderboards.Coordinator.swift in Sources */,
@@ -302,6 +313,7 @@
 				CE352A9B2604F2380081311F /* Leaderboards.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,
 				CE67067925FF83010074323A /* Session.swift in Sources */,
+				CEC67C86260A26F80036EBF3 /* Detail.Stop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

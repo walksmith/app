@@ -2,25 +2,31 @@ import SwiftUI
 import Smith
 
 extension Detail {
-    struct Start: View {
+    struct Stop: View {
         @Binding var session: Session
         let challenge: Challenge
         
         var body: some View {
             Button {
                 withAnimation(.easeInOut(duration: 0.3)) {
-                    session.archive.start(challenge)
+                    session.archive.stop(challenge)
                 }
             } label: {
                 ZStack {
                     Circle()
-                        .stroke(challenge.background, style: .init(lineWidth: 4))
+                        .stroke(LinearGradient(
+                                    gradient: .init(colors: [.pink, .red]),
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing), style: .init(lineWidth: 4))
                         .opacity(0.4)
                         .modifier(Shadowed())
                     ZStack {
                         Circle()
-                            .fill(challenge.background)
-                        Text("Start")
+                            .fill(LinearGradient(
+                                    gradient: .init(colors: [.pink, .red]),
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing))
+                        Text("Stop")
                             .font(.footnote)
                             .fontWeight(.heavy)
                             .foregroundColor(.white)
