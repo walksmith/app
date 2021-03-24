@@ -21,4 +21,10 @@ struct Metrics {
             static let size_padding2 = size - padding2
         }
     }
+    
+    struct chart {
+        static let horizontal = 12
+        static let vertical = 20
+        static let max = CGFloat(vertical - 1)
+    }
 }

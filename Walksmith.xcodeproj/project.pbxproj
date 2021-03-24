@@ -36,6 +36,7 @@
 		CE67067E25FF84730074323A /* Home.Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067D25FF84730074323A /* Home.Greet.swift */; };
 		CE67068325FF980C0074323A /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67068225FF980C0074323A /* GameKit.framework */; };
 		CE713A482608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE713A472608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift */; };
+		CE8A3F24260B5C9600546FA2 /* Detail.Steps.Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A3F23260B5C9600546FA2 /* Detail.Steps.Chart.swift */; };
 		CE9D770626025EA7000BB7CC /* Walking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D770526025EA7000BB7CC /* Walking.swift */; };
 		CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E86F62604B475003C0D58 /* RelativeDateTimeFormatter.swift */; };
 		CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA0F33F25FF7D4C00CFB18C /* App.swift */; };
@@ -86,6 +87,7 @@
 		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
 		CE67068225FF980C0074323A /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE713A472608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.Continuous.swift; sourceTree = "<group>"; };
+		CE8A3F23260B5C9600546FA2 /* Detail.Steps.Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Steps.Chart.swift; sourceTree = "<group>"; };
 		CE9D770526025EA7000BB7CC /* Walking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.swift; sourceTree = "<group>"; };
 		CE9E86F62604B475003C0D58 /* RelativeDateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeDateTimeFormatter.swift; sourceTree = "<group>"; };
 		CEA0F33C25FF7D4C00CFB18C /* Walksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walksmith.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +171,7 @@
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
 				CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */,
 				CE4180BA26024A0F0046B18F /* Detail.Start.swift */,
+				CE8A3F23260B5C9600546FA2 /* Detail.Steps.Chart.swift */,
 				CEC67C89260A29780036EBF3 /* Detail.Steps.swift */,
 				CEC67C85260A26F80036EBF3 /* Detail.Stop.swift */,
 				CEBB7B362606301E007A2AF6 /* Detail.Streak.Header.swift */,
@@ -322,6 +325,7 @@
 				CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */,
 				CE0C2AB12603921C00256AA5 /* Walking.Segmented.Status.swift in Sources */,
 				CE352A8E2604D2230081311F /* Listed.swift in Sources */,
+				CE8A3F24260B5C9600546FA2 /* Detail.Steps.Chart.swift in Sources */,
 				CE352A9B2604F2380081311F /* Leaderboards.swift in Sources */,
 				CEA0F34025FF7D4C00CFB18C /* App.swift in Sources */,
 				CE67067925FF83010074323A /* Session.swift in Sources */,

@@ -13,7 +13,7 @@ extension Home.Item {
                     .font(Font.title3.bold())
             }
             .onAppear {
-                count = session.archive.steps
+                count = session.archive.maxSteps
             }
         }
     }
