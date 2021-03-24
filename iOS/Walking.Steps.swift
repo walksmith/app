@@ -4,8 +4,8 @@ import Combine
 extension Walking {
     struct Steps: View {
         @Binding var session: Session
+        @Binding var steps: Int
         @State private var max = 0
-        @State private var count = 0
         
         var body: some View {
             Text("STEPS")
@@ -14,15 +14,15 @@ extension Walking {
             ZStack {
                 Ring(percent: 1)
                     .stroke(Color.blue.opacity(0.2), lineWidth: 25)
-                Ring(percent: max == 0 ? 0 : .init(count) / .init(max))
+                Ring(percent: max == 0 ? 0 : .init(steps) / .init(max))
                     .stroke(LinearGradient(
-                                gradient: .init(colors: [.purple, .init(.systemIndigo)]),
+                                gradient: .init(colors: [.init(.systemIndigo), .blue]),
                                 startPoint: .top,
                                 endPoint: .bottom),
                             style: .init(lineWidth: 25,
                                          lineCap: .round))
                 VStack {
-                    Text(NSNumber(value: count), formatter: session.decimal)
+                    Text(NSNumber(value: steps), formatter: session.decimal)
                         .font(Font.largeTitle.bold())
                         .padding(.horizontal)
                     if max > 0 {
@@ -36,12 +36,6 @@ extension Walking {
             Spacer()
                 .onAppear {
                     max = session.archive.maxSteps
-                    
-                    var sub: AnyCancellable?
-                    sub = session.health.query(session.archive, .steps).receive(on: DispatchQueue.main).sink {
-                        count = $0
-                        sub?.cancel()
-                    }
                 }
         }
     }

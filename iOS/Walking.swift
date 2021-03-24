@@ -1,11 +1,11 @@
 import SwiftUI
-import Combine
 import Smith
 
 struct Walking: View {
     @Binding var session: Session
     @State private var challenge: Challenge?
     @State private var disabled = false
+    @State private var steps = 0
     
     var body: some View {
         VStack {
@@ -16,27 +16,21 @@ struct Walking: View {
             case .streak:
                 Streak(session: $session)
             case .steps:
-                Steps(session: $session)
+                Steps(session: $session, steps: $steps)
             default:
                 Time(session: $session)
             }
             
             Button {
                 disabled = true
-                var sub: AnyCancellable?
-                sub = session.health.query(session.archive, .steps).receive(on: DispatchQueue.main).sink { steps in
-                    withAnimation(.spring(blendDuration: 0.3)) {
-                        session.archive.end(steps: steps)
-                        DispatchQueue.global(qos: .utility).async {
-                            if session.archive.enrolled(.streak) {
-                                session.game.submit(.streak, session.archive.calendar.streak.current)
-                            }
-                            if session.archive.enrolled(.steps) {
-                                session.game.submit(.steps, steps)
-                            }
-                        }
+                session.archive.end(steps: steps)
+                DispatchQueue.global(qos: .utility).async {
+                    if session.archive.enrolled(.streak) {
+                        session.game.submit(.streak, session.archive.calendar.streak.current)
                     }
-                    sub?.cancel()
+                    if session.archive.enrolled(.steps) {
+                        session.game.submit(.steps, steps)
+                    }
                 }
             } label: {
                 ZStack {
@@ -70,6 +64,13 @@ struct Walking: View {
             .disabled(disabled)
             .padding(.top, 10)
             .padding(.bottom)
+            .onReceive(session.health.steps.receive(on: DispatchQueue.main)) {
+                steps = $0
+            }
+            .onAppear {
+                session.health.steps(session.archive)
+            }
+            .onDisappear(perform: session.health.clear)
         }
     }
 }

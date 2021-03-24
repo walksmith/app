@@ -4,49 +4,70 @@ import Combine
 import Smith
 
 final class Health {
+    let steps = PassthroughSubject<Int, Never>()
+    private var subs = Set<AnyCancellable>()
+    private var queries = Set<HKQuery>()
     private let store = HKHealthStore()
     
     var available: Bool {
         HKHealthStore.isHealthDataAvailable()
     }
     
+    func clear() {
+        guard available else { return }
+        queries.forEach(store.stop)
+        queries = []
+    }
+    
     func request(_ challenge: Challenge) {
         store.requestAuthorization(toShare: [], read: [challenge.object]) { _, _ in }
     }
     
-    func query(_ archive: Archive, _ challenge: Challenge) -> Future<Int, Never> {
-        .init { [weak self] promise in
-            guard
-                self?.available == true,
-                archive.enrolled(challenge),
-                let start = archive.last?.start
-            else {
-                return promise(.success(0))
+    func steps(_ archive: Archive) {
+        guard
+            available == true,
+            archive.enrolled(.steps),
+            let start = archive.last?.start
+        else { return }
+        
+        let query = HKStatisticsCollectionQuery(
+            quantityType: Challenge.steps.quantity,
+            quantitySamplePredicate: HKQuery.predicateForSamples(withStart: start, end: nil, options: .strictStartDate),
+            options: .cumulativeSum,
+            anchorDate: start,
+            intervalComponents: .init(minute: 1))
+        
+        query.initialResultsHandler = { [weak self] _, results, _ in
+            results.map {
+                self?.steps(start, results: $0)
             }
-            
-            let query = HKStatisticsCollectionQuery(
-                quantityType: challenge.quantity,
-                quantitySamplePredicate: HKQuery.predicateForSamples(withStart: start, end: .init(), options: [.strictStartDate, .strictEndDate]),
-                options: .cumulativeSum,
-                anchorDate: start,
-                intervalComponents: .init(day: 1))
-            
-            query.initialResultsHandler = { _, results, _ in
-                guard let results = results else { return promise(.success(0)) }
-                results.enumerateStatistics(
-                    from: start,
-                    to: .init(),
-                    with: { result, _ in
-                        guard let count = result.sumQuantity()?.doubleValue(for: .count()) else {
-                            return promise(.success(0))
-                        }
-                        promise(.success(.init(count)))
-                    }
-                )
-            }
-            
-            self?.store.execute(query)
         }
+        
+        query.statisticsUpdateHandler = { [weak self] _, _, results, _ in
+            results.map {
+                self?.steps(start, results: $0)
+            }
+        }
+        
+        store.execute(query)
+        queries.insert(query)
+    }
+    
+    private func steps(_ start: Date, results: HKStatisticsCollection) {
+        results.enumerateStatistics(
+            from: start,
+            to: .init(),
+            with: { [weak self] result, _ in
+                result.sumQuantity()
+                    .map {
+                        $0.doubleValue(for: .count())
+                    }
+                    .map(Int.init)
+                    .map {
+                        self?.steps.send($0)
+                    }
+            }
+        )
     }
 }
 

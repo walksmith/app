@@ -3,4 +3,63 @@
    uuid = "AA0C64A1-B660-458B-AFBB-1FD82FFCA49E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BAC1EF8-E57D-4C76-BAD2-5ED37C93C721"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "iOS/Health.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "steps(_:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "update handler"
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "6BAC1EF8-E57D-4C76-BAD2-5ED37C93C721 - 554b726e9d7bcd53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.HKStatisticsCollectionQuery, Swift.Optional&lt;__C.HKStatistics&gt;, Swift.Optional&lt;__C.HKStatisticsCollection&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Walksmith.Health.steps(Smith.Archive) -&gt; ()"
+                  moduleName = "Walksmith"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vaux/dev/Walksmith/iOS/Health.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "6BAC1EF8-E57D-4C76-BAD2-5ED37C93C721 - 2452a93aef2e3c14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.HKStatisticsCollection) -&gt; Swift.Optional&lt;()&gt; in closure #2 (__C.HKStatisticsCollectionQuery, Swift.Optional&lt;__C.HKStatistics&gt;, Swift.Optional&lt;__C.HKStatisticsCollection&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Walksmith.Health.steps(Smith.Archive) -&gt; ()"
+                  moduleName = "Walksmith"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vaux/dev/Walksmith/iOS/Health.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

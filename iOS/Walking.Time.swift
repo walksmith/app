@@ -19,7 +19,7 @@ extension Walking {
                     Image(systemName: "figure.walk")
                         .font(.title2)
                     Text(verbatim: counter)
-                        .font(Font.callout.bold().monospacedDigit())
+                        .font(Font.body.bold().monospacedDigit())
                 }
                 .foregroundColor(.black)
             }
