@@ -69,6 +69,7 @@ struct Walking: View {
             }
             .onAppear {
                 session.health.steps(session.archive)
+                session.pedometer.steps(session.archive)
             }
             .onDisappear(perform: session.health.clear)
         }

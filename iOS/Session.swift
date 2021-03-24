@@ -8,6 +8,7 @@ struct Session {
     var section = Section.home
     let game = Game()
     let health = Health()
+    let pedometer = Pedometer()
     let dismiss = PassthroughSubject<Void, Never>()
     let components = DateComponentsFormatter()
     let relative = RelativeDateTimeFormatter()

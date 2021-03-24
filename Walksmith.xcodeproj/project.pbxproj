@@ -56,6 +56,7 @@
 		CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
+		CEFC4862260B98A600D4CE4B /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFC4861260B98A600D4CE4B /* Pedometer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.Day.swift; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		CEFC4861260B98A600D4CE4B /* Pedometer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedometer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				CE352A902604D4730081311F /* Listed.Item.swift */,
 				CE352A8D2604D2230081311F /* Listed.swift */,
 				CE16C764260758C00049004F /* Metrics.swift */,
+				CEFC4861260B98A600D4CE4B /* Pedometer.swift */,
 				CE595272260B74C80016FE8A /* Ring.swift */,
 				CE23589326023AA700D2BFBB /* Session.Player.swift */,
 				CE4180B2260242310046B18F /* Session.Section.swift */,
@@ -314,6 +317,7 @@
 				CE713A482608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift in Sources */,
 				CE16C7702607648A0049004F /* Ephemeris.Month.swift in Sources */,
 				CED81BCC260A606B003AB46C /* Walking.Streak.swift in Sources */,
+				CEFC4862260B98A600D4CE4B /* Pedometer.swift in Sources */,
 				CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */,
 				CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */,
 				CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */,

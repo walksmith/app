@@ -35,7 +35,7 @@ final class Health {
             quantitySamplePredicate: HKQuery.predicateForSamples(withStart: start, end: nil, options: .strictStartDate),
             options: .cumulativeSum,
             anchorDate: start,
-            intervalComponents: .init(minute: 1))
+            intervalComponents: .init(day: 1))
         
         query.initialResultsHandler = { [weak self] _, results, _ in
             results.map {
@@ -56,7 +56,7 @@ final class Health {
     private func steps(_ start: Date, results: HKStatisticsCollection) {
         results.enumerateStatistics(
             from: start,
-            to: .init(),
+            to: .distantFuture,
             with: { [weak self] result, _ in
                 result.sumQuantity()
                     .map {
