@@ -10,23 +10,28 @@ extension Walking {
             Text("Streak")
                 .font(.headline)
                 .padding(.bottom)
-            HStack(spacing: 0) {
+            HStack {
+                Spacer()
                 Text(NSNumber(value: streak.maximum), formatter: session.decimal)
-                    .frame(width: Metrics.streak.walking.width)
+                    .font(Font.title.bold())
+                Text("/")
+                    .font(.title2)
+                    .foregroundColor(.secondary)
                 Text(NSNumber(value: streak.current), formatter: session.decimal)
-                    .frame(width: Metrics.streak.walking.width)
+                    .font(.title2)
+                    .foregroundColor(.secondary)
             }
-            .font(Font.title.bold())
-            .padding(.bottom, 1)
-            .padding(.top)
-            HStack(spacing: 0) {
-                Text("MAX")
-                    .frame(width: Metrics.streak.walking.width)
-                Text("CURRENT")
-                    .frame(width: Metrics.streak.walking.width)
+            .frame(width: 250)
+            ZStack {
+                Bar(percent: 1)
+                    .stroke(Color(.secondarySystemBackground), style: .init(lineWidth: 8, lineCap: .round))
+                Bar(percent: streak.maximum == 0 ? 0 : .init(streak.current) / .init(streak.maximum))
+                    .stroke(LinearGradient(
+                                gradient: .init(colors: [.blue, .init(.systemIndigo)]),
+                                startPoint: .leading,
+                                endPoint: .trailing), style: .init(lineWidth: 8, lineCap: .round))
             }
-            .font(.callout)
-            .foregroundColor(.secondary)
+            .frame(width: 250, height: 10)
             .onAppear {
                 streak = session.archive.calendar.streak
             }

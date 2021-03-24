@@ -9,7 +9,7 @@ extension Walking.Segmented {
         var body: some View {
             Button(action: action) {
                 ZStack {
-                    Circle()
+                    RoundedRectangle(cornerRadius: 8)
                         .fill(status == .selected ? Color.accentColor : .clear)
                     Image(systemName: symbol)
                         .font(.title2)
@@ -19,7 +19,7 @@ extension Walking.Segmented {
                                                 ? .secondary
                                                 : .init(.quaternaryLabel))
                 }
-                .frame(width: 50, height: 50)
+                .frame(width: 46, height: 46)
             }
         }
     }

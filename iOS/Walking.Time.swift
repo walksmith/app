@@ -23,13 +23,18 @@ extension Walking {
                 .foregroundColor(.black)
             }
             .frame(width: 160, height: 160)
+            .onAppear(perform: refresh)
             .onReceive(timer) { _ in
-                if case let .walking(duration) = session.archive.status {
-                    withAnimation(.easeInOut(duration: 1)) {
-                        self.indicator = .init(duration.truncatingRemainder(dividingBy: 60))
-                    }
-                    counter = session.components.string(from: duration) ?? ""
+                refresh()
+            }
+        }
+        
+        private func refresh() {
+            if case let .walking(duration) = session.archive.status {
+                withAnimation(.easeInOut(duration: 1)) {
+                    self.indicator = .init(duration.truncatingRemainder(dividingBy: 60))
                 }
+                counter = session.components.string(from: duration) ?? ""
             }
         }
     }

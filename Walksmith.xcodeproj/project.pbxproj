@@ -21,7 +21,7 @@
 		CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2491152606163F00B3E741 /* Home.Item.Streak.swift */; };
 		CE352A8E2604D2230081311F /* Listed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A8D2604D2230081311F /* Listed.swift */; };
 		CE352A912604D4730081311F /* Listed.Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A902604D4730081311F /* Listed.Item.swift */; };
-		CE352A962604E1B30081311F /* Listed.Item.Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A952604E1B30081311F /* Listed.Item.Bar.swift */; };
+		CE352A962604E1B30081311F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A952604E1B30081311F /* Bar.swift */; };
 		CE352A9B2604F2380081311F /* Leaderboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A9A2604F2380081311F /* Leaderboards.swift */; };
 		CE352A9E2604F25C0081311F /* Leaderboards.Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A9D2604F25C0081311F /* Leaderboards.Coordinator.swift */; };
 		CE3BA8E5260A12BF004DFC3E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3BA8E4260A12BF004DFC3E /* HealthKit.framework */; };
@@ -30,6 +30,7 @@
 		CE4180B7260245190046B18F /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180B6260245190046B18F /* Detail.swift */; };
 		CE4180BB26024A0F0046B18F /* Detail.Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180BA26024A0F0046B18F /* Detail.Start.swift */; };
 		CE4180BF26024D620046B18F /* App.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4180BE26024D620046B18F /* App.Delegate.swift */; };
+		CE595273260B74C80016FE8A /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE595272260B74C80016FE8A /* Ring.swift */; };
 		CE66B402260218C000609850 /* Smith in Frameworks */ = {isa = PBXBuildFile; productRef = CE66B401260218C000609850 /* Smith */; };
 		CE67067625FF82E00074323A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067525FF82E00074323A /* Home.swift */; };
 		CE67067925FF83010074323A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67067825FF83010074323A /* Session.swift */; };
@@ -73,7 +74,7 @@
 		CE2491152606163F00B3E741 /* Home.Item.Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Item.Streak.swift; sourceTree = "<group>"; };
 		CE352A8D2604D2230081311F /* Listed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listed.swift; sourceTree = "<group>"; };
 		CE352A902604D4730081311F /* Listed.Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listed.Item.swift; sourceTree = "<group>"; };
-		CE352A952604E1B30081311F /* Listed.Item.Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listed.Item.Bar.swift; sourceTree = "<group>"; };
+		CE352A952604E1B30081311F /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		CE352A9A2604F2380081311F /* Leaderboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboards.swift; sourceTree = "<group>"; };
 		CE352A9D2604F25C0081311F /* Leaderboards.Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboards.Coordinator.swift; sourceTree = "<group>"; };
 		CE3BA8E4260A12BF004DFC3E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -82,6 +83,7 @@
 		CE4180B6260245190046B18F /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		CE4180BA26024A0F0046B18F /* Detail.Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.Start.swift; sourceTree = "<group>"; };
 		CE4180BE26024D620046B18F /* App.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.Delegate.swift; sourceTree = "<group>"; };
+		CE595272260B74C80016FE8A /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		CE67067525FF82E00074323A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		CE67067825FF83010074323A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CE67067D25FF84730074323A /* Home.Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Greet.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				CEA0F34825FF7D4C00CFB18C /* Info.plist */,
 				CE4180BE26024D620046B18F /* App.Delegate.swift */,
 				CEA0F33F25FF7D4C00CFB18C /* App.swift */,
+				CE352A952604E1B30081311F /* Bar.swift */,
 				CEB8361D2600EF1D0021BF60 /* Challenge.Metadata.swift */,
 				CE4180BA26024A0F0046B18F /* Detail.Start.swift */,
 				CE8A3F23260B5C9600546FA2 /* Detail.Steps.Chart.swift */,
@@ -190,10 +193,10 @@
 				CE67067525FF82E00074323A /* Home.swift */,
 				CE352A9D2604F25C0081311F /* Leaderboards.Coordinator.swift */,
 				CE352A9A2604F2380081311F /* Leaderboards.swift */,
-				CE352A952604E1B30081311F /* Listed.Item.Bar.swift */,
 				CE352A902604D4730081311F /* Listed.Item.swift */,
 				CE352A8D2604D2230081311F /* Listed.swift */,
 				CE16C764260758C00049004F /* Metrics.swift */,
+				CE595272260B74C80016FE8A /* Ring.swift */,
 				CE23589326023AA700D2BFBB /* Session.Player.swift */,
 				CE4180B2260242310046B18F /* Session.Section.swift */,
 				CE67067825FF83010074323A /* Session.swift */,
@@ -317,10 +320,11 @@
 				CEC67C8A260A29780036EBF3 /* Detail.Steps.swift in Sources */,
 				CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */,
 				CEBB7B372606301E007A2AF6 /* Detail.Streak.Header.swift in Sources */,
+				CE595273260B74C80016FE8A /* Ring.swift in Sources */,
 				CE352A9E2604F25C0081311F /* Leaderboards.Coordinator.swift in Sources */,
 				CE67067E25FF84730074323A /* Home.Greet.swift in Sources */,
 				CE0C2AA826038CC600256AA5 /* Walking.Segmented.swift in Sources */,
-				CE352A962604E1B30081311F /* Listed.Item.Bar.swift in Sources */,
+				CE352A962604E1B30081311F /* Bar.swift in Sources */,
 				CED81BD0260A6576003AB46C /* Walking.Steps.swift in Sources */,
 				CE0C2A9E26036BF300256AA5 /* Walking.Time.swift in Sources */,
 				CE0C2AB12603921C00256AA5 /* Walking.Segmented.Status.swift in Sources */,
