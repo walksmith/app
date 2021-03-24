@@ -1,37 +1,42 @@
 import SwiftUI
+import Smith
 
 extension Detail {
     struct Steps: View {
         @Binding var session: Session
-        @State private var values = [Double]()
-        @State private var count = 0
+        @State private var steps = Smith.Steps.zero
+        @State private var max = 0
         
         var body: some View {
             if session.health.available {
                 HStack {
                     Text("Max")
-                    Text(NSNumber(value: values.max() ?? 0), formatter: session.decimal)
+                    Text(NSNumber(value: steps.max), formatter: session.decimal)
                     Spacer()
                 }
                 .font(Font.body.bold())
                 .padding([.horizontal, .top])
-                Text("Over the last \(Metrics.chart.vertical) walks")
+                Text("Over the last \(Metrics.chart.vertical) Walks")
                     .font(.callout)
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
                     .padding(.leading)
-                Chart(values: [0.3, 0.4, 0.5, 0.4, 0.6, 0.7, 0.8, 0.9, 0.2, 0.3, 0.4, 0.4, 0.5, 0.4, 0.3, 0.32, 0.31, 0.33, 0.35, 0.34])
+                Chart(values: steps.values)
                     .frame(height: 260)
                     .padding(.horizontal)
                     .padding(.vertical, 5)
                 HStack {
                     Text("All Time Max")
-                    Text(NSNumber(value: count), formatter: session.decimal)
+                    Text(NSNumber(value: max), formatter: session.decimal)
                     Spacer()
                 }
                 .font(.footnote)
                 .foregroundColor(.secondary)
                 .padding([.horizontal, .bottom])
+                .onAppear {
+                    steps = session.archive.steps
+                    max = session.archive.maxSteps
+                }
             } else {
                 Image(systemName: "speedometer")
                     .font(.largeTitle)
