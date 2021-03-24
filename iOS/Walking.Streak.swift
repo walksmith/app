@@ -7,21 +7,17 @@ extension Walking {
         @State private var streak = Smith.Streak.zero
         
         var body: some View {
-            Text("Streak")
+            Text("STREAK")
                 .font(.headline)
-                .padding(.bottom)
+            Spacer()
+            Text(NSNumber(value: streak.maximum), formatter: session.decimal)
+                .font(Font.title.bold())
             HStack {
-                Spacer()
-                Text(NSNumber(value: streak.maximum), formatter: session.decimal)
-                    .font(Font.title.bold())
-                Text("/")
-                    .font(.title2)
-                    .foregroundColor(.secondary)
+                Text("Max")
                 Text(NSNumber(value: streak.current), formatter: session.decimal)
-                    .font(.title2)
-                    .foregroundColor(.secondary)
             }
-            .frame(width: 250)
+            .font(.title3)
+            .foregroundColor(.secondary)
             ZStack {
                 Bar(percent: 1)
                     .stroke(Color(.secondarySystemBackground), style: .init(lineWidth: 8, lineCap: .round))
@@ -31,10 +27,11 @@ extension Walking {
                                 startPoint: .leading,
                                 endPoint: .trailing), style: .init(lineWidth: 8, lineCap: .round))
             }
-            .frame(width: 250, height: 10)
-            .onAppear {
-                streak = session.archive.calendar.streak
-            }
+            .frame(width: 160, height: 10)
+            Spacer()
+                .onAppear {
+                    streak = session.archive.calendar.streak
+                }
         }
     }
 }

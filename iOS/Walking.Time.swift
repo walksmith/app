@@ -9,6 +9,7 @@ extension Walking {
         private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
         
         var body: some View {
+            Spacer()
             ZStack {
                 Ring(indicator: indicator, center: .init(x: 80, y: 2))
                 Circle()
@@ -23,10 +24,11 @@ extension Walking {
                 .foregroundColor(.black)
             }
             .frame(width: 160, height: 160)
-            .onAppear(perform: refresh)
-            .onReceive(timer) { _ in
-                refresh()
-            }
+            Spacer()
+                .onAppear(perform: refresh)
+                .onReceive(timer) { _ in
+                    refresh()
+                }
         }
         
         private func refresh() {

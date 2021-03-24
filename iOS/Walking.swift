@@ -10,7 +10,7 @@ struct Walking: View {
     var body: some View {
         VStack {
             Segmented(session: $session, challenge: $challenge)
-            Spacer()
+                .padding(.bottom)
             
             switch challenge {
             case .streak:
@@ -21,7 +21,6 @@ struct Walking: View {
                 Time(session: $session)
             }
             
-            Spacer()
             Button {
                 disabled = true
                 var sub: AnyCancellable?
@@ -57,6 +56,7 @@ struct Walking: View {
                 .fixedSize()
             }
             .disabled(disabled)
+            .padding(.top)
             Button {
                 withAnimation(.spring(blendDuration: 0.3)) {
                     session.archive.cancel()

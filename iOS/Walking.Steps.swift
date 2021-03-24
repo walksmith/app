@@ -8,8 +8,9 @@ extension Walking {
         @State private var count = 0
         
         var body: some View {
-            Text("Steps")
+            Text("STEPS")
                 .font(.headline)
+            Spacer()
             ZStack {
                 Ring(percent: 1)
                     .stroke(Color.blue.opacity(0.2), lineWidth: 25)
@@ -26,22 +27,22 @@ extension Walking {
                         .padding(.horizontal)
                     if max > 0 {
                         Text(NSNumber(value: max), formatter: session.decimal)
-                            .font(.caption)
+                            .font(.title3)
                             .foregroundColor(.secondary)
                     }
                 }
             }
-            .frame(maxWidth: 250, maxHeight: 250)
-            .padding()
-            .onAppear {
-                max = session.archive.maxSteps
-                
-                var sub: AnyCancellable?
-                sub = session.health.query(session.archive, .steps).receive(on: DispatchQueue.main).sink {
-                    count = $0
-                    sub?.cancel()
+            .frame(maxWidth: 200, maxHeight: 200)
+            Spacer()
+                .onAppear {
+                    max = session.archive.maxSteps
+                    
+                    var sub: AnyCancellable?
+                    sub = session.health.query(session.archive, .steps).receive(on: DispatchQueue.main).sink {
+                        count = $0
+                        sub?.cancel()
+                    }
                 }
-            }
         }
     }
 }
