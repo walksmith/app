@@ -64,13 +64,13 @@ struct Walking: View {
             .disabled(disabled)
             .padding(.top, 10)
             .padding(.bottom)
-            .onReceive(session.health.steps.receive(on: DispatchQueue.main)) {
-                steps = $0
-            }
-            .onAppear {
-                session.health.steps(session.archive)
-            }
-            .onDisappear(perform: session.health.clear)
         }
+        .onReceive(session.health.steps.receive(on: DispatchQueue.main)) {
+            steps = $0
+        }
+        .onAppear {
+            session.health.steps(session.archive)
+        }
+        .onDisappear(perform: session.health.clear)
     }
 }

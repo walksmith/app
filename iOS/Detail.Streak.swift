@@ -14,7 +14,7 @@ extension Detail {
                     streak = calendar.streak
                 }
             if let year = calendar.last {
-                Ephemeris(session: $session, month: year.months.count - 1, year: year)
+                Ephemeris(session: $session, index: year.months.count - 1, year: year)
                     .padding(.vertical)
             } else {
                 Image(systemName: "figure.walk")

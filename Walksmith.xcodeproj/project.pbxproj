@@ -56,6 +56,7 @@
 		CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
+		CEE871AF260CC03800654696 /* Ephemeris.Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE871AE260CC03800654696 /* Ephemeris.Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.Day.swift; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		CEE871AE260CC03800654696 /* Ephemeris.Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				CE713A472608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift */,
 				CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */,
 				CE16C76F2607648A0049004F /* Ephemeris.Month.swift */,
+				CEE871AE260CC03800654696 /* Ephemeris.Navigation.swift */,
 				CE16C76826075B600049004F /* Ephemeris.swift */,
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
 				CEC67C8E260A2C180036EBF3 /* Health.swift */,
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0C2AA32603728000256AA5 /* Walking.Time.Ring.swift in Sources */,
+				CEE871AF260CC03800654696 /* Ephemeris.Navigation.swift in Sources */,
 				CEB8361E2600EF1D0021BF60 /* Challenge.Metadata.swift in Sources */,
 				CE4180B0260241F50046B18F /* Window.swift in Sources */,
 				CE0C2AAD26038EDA00256AA5 /* Walking.Segmented.Item.swift in Sources */,
