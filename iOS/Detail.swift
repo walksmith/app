@@ -49,12 +49,25 @@ struct Detail: View {
                 case .map:
                     Text("")
                 }
-                Stop(session: $session, challenge: challenge)
-                    .padding(.top, 50)
-                    .padding(.bottom)
+                Control(title: "STOP", gradient: .init(
+                            gradient: .init(colors: [.pink, .purple]),
+                            startPoint: .leading,
+                            endPoint: .trailing)) {
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        session.archive.stop(challenge)
+                    }
+                }
+                .padding(.top, 50)
+                .padding(.bottom)
             } else {
-                Start(session: $session, challenge: challenge)
-                    .padding(.top, 150)
+                Control(title: "START", gradient: challenge.background) {
+                    session.health.request(challenge) {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            session.archive.start(challenge)
+                        }
+                    }
+                }
+                .padding(.top, 150)
             }
         }
     }

@@ -21,7 +21,10 @@ struct Walking: View {
                 Time(session: $session)
             }
             
-            Button {
+            Control(title: "FINISH", gradient: .init(
+                        gradient: .init(colors: [.init(.systemIndigo), .blue]),
+                        startPoint: .leading,
+                        endPoint: .trailing)) {
                 disabled = true
                 session.archive.end(steps: steps)
                 DispatchQueue.global(qos: .utility).async {
@@ -32,22 +35,6 @@ struct Walking: View {
                         session.game.submit(.steps, steps)
                     }
                 }
-            } label: {
-                ZStack {
-                    Capsule()
-                        .fill(LinearGradient(
-                                gradient: .init(colors: [.init(.systemIndigo), .blue]),
-                                startPoint: .leading,
-                                endPoint: .trailing))
-                        .modifier(Shadowed())
-                    Text("FINISH")
-                        .foregroundColor(.white)
-                        .font(Font.callout)
-                        .fontWeight(.medium)
-                        .padding(.horizontal, 64)
-                        .padding(.vertical, 10)
-                }
-                .fixedSize()
             }
             .disabled(disabled)
             .padding(.top)
