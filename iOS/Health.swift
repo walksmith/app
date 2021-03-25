@@ -39,13 +39,13 @@ final class Health {
         
         query.initialResultsHandler = { [weak self] _, results, _ in
             results.map {
-                self?.steps(start, results: $0)
+                self?.steps(start: start, results: $0)
             }
         }
         
         query.statisticsUpdateHandler = { [weak self] _, _, results, _ in
             results.map {
-                self?.steps(start, results: $0)
+                self?.steps(start: start, results: $0)
             }
         }
         
@@ -53,10 +53,10 @@ final class Health {
         queries.insert(query)
     }
     
-    private func steps(_ start: Date, results: HKStatisticsCollection) {
+    private func steps(start: Date, results: HKStatisticsCollection) {
         results.enumerateStatistics(
             from: start,
-            to: .distantFuture,
+            to: .init(),
             with: { [weak self] result, _ in
                 result.sumQuantity()
                     .map {
@@ -80,7 +80,7 @@ private extension Challenge {
         .quantityType(forIdentifier: identifier)!
     }
     
-    var identifier: HKQuantityTypeIdentifier {
+    private var identifier: HKQuantityTypeIdentifier {
         switch self {
         case .steps: return .stepCount
         default: fatalError()
