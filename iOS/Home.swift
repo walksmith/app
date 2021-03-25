@@ -5,7 +5,7 @@ struct Home: View {
     @Binding var session: Session
     
     var body: some View {
-        ScrollView {
+        VStack {
             Greet(session: $session)
                 .padding(.top, 40)
             Button {
@@ -26,12 +26,11 @@ struct Home: View {
                 }
                 .frame(width: 40, height: 40)
             }
-            .padding(.vertical, 40)
+            .padding(.top, 40)
+            Spacer()
             ForEach(Challenge.allCases, id: \.self) { challenge in
                 Item(session: $session, challenge: challenge)
             }
-            Spacer()
-                .frame(height: 20)
         }
     }
 }

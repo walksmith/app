@@ -29,7 +29,6 @@ extension Detail.Streak {
             }
             .font(.footnote)
             .foregroundColor(.secondary)
-            .padding(.bottom, 10)
         }
         
         private var today: Bool {

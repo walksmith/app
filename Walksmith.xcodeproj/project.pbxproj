@@ -18,7 +18,6 @@
 		CE16C76926075B600049004F /* Ephemeris.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16C76826075B600049004F /* Ephemeris.swift */; };
 		CE16C7702607648A0049004F /* Ephemeris.Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16C76F2607648A0049004F /* Ephemeris.Month.swift */; };
 		CE23589426023AA700D2BFBB /* Session.Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23589326023AA700D2BFBB /* Session.Player.swift */; };
-		CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2491152606163F00B3E741 /* Home.Item.Streak.swift */; };
 		CE352A8E2604D2230081311F /* Listed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A8D2604D2230081311F /* Listed.swift */; };
 		CE352A912604D4730081311F /* Listed.Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A902604D4730081311F /* Listed.Item.swift */; };
 		CE352A962604E1B30081311F /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE352A952604E1B30081311F /* Bar.swift */; };
@@ -50,7 +49,6 @@
 		CEC67C8F260A2C180036EBF3 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC67C8E260A2C180036EBF3 /* Health.swift */; };
 		CED81BCC260A606B003AB46C /* Walking.Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED81BCB260A606B003AB46C /* Walking.Streak.swift */; };
 		CED81BD0260A6576003AB46C /* Walking.Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED81BCF260A6576003AB46C /* Walking.Steps.swift */; };
-		CED81BD4260A66EF003AB46C /* Home.Item.Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED81BD3260A66EF003AB46C /* Home.Item.Steps.swift */; };
 		CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */; };
 		CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1225FF9EB4005F9E6E /* Game.swift */; };
 		CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */; };
@@ -71,7 +69,6 @@
 		CE16C76826075B600049004F /* Ephemeris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.swift; sourceTree = "<group>"; };
 		CE16C76F2607648A0049004F /* Ephemeris.Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.swift; sourceTree = "<group>"; };
 		CE23589326023AA700D2BFBB /* Session.Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.Player.swift; sourceTree = "<group>"; };
-		CE2491152606163F00B3E741 /* Home.Item.Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Item.Streak.swift; sourceTree = "<group>"; };
 		CE352A8D2604D2230081311F /* Listed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listed.swift; sourceTree = "<group>"; };
 		CE352A902604D4730081311F /* Listed.Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listed.Item.swift; sourceTree = "<group>"; };
 		CE352A952604E1B30081311F /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
@@ -104,7 +101,6 @@
 		CEC67C8E260A2C180036EBF3 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		CED81BCB260A606B003AB46C /* Walking.Streak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Streak.swift; sourceTree = "<group>"; };
 		CED81BCF260A6576003AB46C /* Walking.Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walking.Steps.swift; sourceTree = "<group>"; };
-		CED81BD3260A66EF003AB46C /* Home.Item.Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.Item.Steps.swift; sourceTree = "<group>"; };
 		CEDB3E052608A3BD001CD7FE /* Ephemeris.Month.Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ephemeris.Month.Day.swift; sourceTree = "<group>"; };
 		CEDE1E1225FF9EB4005F9E6E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CEDE1E1B25FF9FDF005F9E6E /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
@@ -187,8 +183,6 @@
 				CEDE1E1225FF9EB4005F9E6E /* Game.swift */,
 				CEC67C8E260A2C180036EBF3 /* Health.swift */,
 				CE67067D25FF84730074323A /* Home.Greet.swift */,
-				CED81BD3260A66EF003AB46C /* Home.Item.Steps.swift */,
-				CE2491152606163F00B3E741 /* Home.Item.Streak.swift */,
 				CEB836152600E9690021BF60 /* Home.Item.swift */,
 				CE67067525FF82E00074323A /* Home.swift */,
 				CE352A9D2604F25C0081311F /* Leaderboards.Coordinator.swift */,
@@ -302,7 +296,6 @@
 				CE9D770626025EA7000BB7CC /* Walking.swift in Sources */,
 				CEBB7B3326062C56007A2AF6 /* Detail.Streak.swift in Sources */,
 				CEDE1E1C25FF9FDF005F9E6E /* UIApplication.swift in Sources */,
-				CED81BD4260A66EF003AB46C /* Home.Item.Steps.swift in Sources */,
 				CE67067625FF82E00074323A /* Home.swift in Sources */,
 				CE16C76926075B600049004F /* Ephemeris.swift in Sources */,
 				CEDE1E1325FF9EB4005F9E6E /* Game.swift in Sources */,
@@ -315,7 +308,6 @@
 				CE713A482608CE4900B8B9A6 /* Ephemeris.Month.Continuous.swift in Sources */,
 				CE16C7702607648A0049004F /* Ephemeris.Month.swift in Sources */,
 				CED81BCC260A606B003AB46C /* Walking.Streak.swift in Sources */,
-				CE2491162606163F00B3E741 /* Home.Item.Streak.swift in Sources */,
 				CEDB3E062608A3BD001CD7FE /* Ephemeris.Month.Day.swift in Sources */,
 				CEC67C8A260A29780036EBF3 /* Detail.Steps.swift in Sources */,
 				CE9E86F72604B475003C0D58 /* RelativeDateTimeFormatter.swift in Sources */,

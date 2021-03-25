@@ -7,7 +7,7 @@ struct Detail: View {
     @State private var leaderboard = false
     
     var body: some View {
-        ScrollView {
+        VStack {
             HStack {
                 Button {
                     withAnimation(.spring(blendDuration: 0.3)) {
@@ -41,25 +41,28 @@ struct Detail: View {
             if session.archive.enrolled(challenge) {
                 switch challenge {
                 case .streak:
-                    Streak(session: $session)
+                    let calendar = session.archive.calendar
+                    Streak(session: $session, calendar: calendar, streak: calendar.streak)
                 case .steps:
-                    Steps(session: $session)
+                    Steps(session: $session, steps: session.archive.steps, max: session.archive.maxSteps)
                 case .distance:
                     Text("")
                 case .map:
                     Text("")
                 }
-                Control(title: "STOP", gradient: .init(
-                            gradient: .init(colors: [.pink, .purple]),
-                            startPoint: .leading,
-                            endPoint: .trailing)) {
+                Spacer()
+                Button {
                     withAnimation(.easeInOut(duration: 0.3)) {
                         session.archive.stop(challenge)
                     }
+                } label: {
+                    Text("STOP")
+                        .foregroundColor(.secondary)
+                        .font(Font.footnote.bold())
+                        .frame(width: 300, height: 40)
                 }
-                .padding(.top, 50)
-                .padding(.bottom)
             } else {
+                Spacer()
                 Control(title: "START", gradient: challenge.background) {
                     session.health.request(challenge) {
                         withAnimation(.easeInOut(duration: 0.3)) {
@@ -67,8 +70,9 @@ struct Detail: View {
                         }
                     }
                 }
-                .padding(.top, 150)
             }
+            Spacer()
+                .frame(height: 30)
         }
     }
 }

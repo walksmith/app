@@ -30,24 +30,11 @@ extension Home {
                             Image(systemName: challenge.symbol)
                                 .font(.title)
                         }
-                        if session.archive.enrolled(challenge) {
-                            Spacer()
-                                .frame(height: 20)
-                            switch challenge {
-                            case .streak:
-                                Streak(session: $session)
-                            case .steps:
-                                Steps(session: $session)
-                            case .distance:
-                                Text("")
-                            case .map:
-                                Text("")
-                            }
-                        }
                     }
                     .padding()
                     .foregroundColor(.white)
                 }
+                .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.horizontal)
         }

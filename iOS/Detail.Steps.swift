@@ -4,10 +4,11 @@ import Smith
 extension Detail {
     struct Steps: View {
         @Binding var session: Session
-        @State private var steps = Smith.Steps.zero
-        @State private var max = 0
+        let steps: Smith.Steps
+        let max: Int
         
         var body: some View {
+            Spacer()
             if session.health.available {
                 HStack {
                     Text("Max")
@@ -15,7 +16,7 @@ extension Detail {
                     Spacer()
                 }
                 .font(Font.body.bold())
-                .padding([.horizontal, .top])
+                .padding(.horizontal)
                 Text("Over the last \(Metrics.chart.vertical) Walks")
                     .font(.callout)
                     .foregroundColor(.secondary)
@@ -32,22 +33,14 @@ extension Detail {
                 }
                 .font(.footnote)
                 .foregroundColor(.secondary)
-                .padding([.horizontal, .bottom])
-                .onAppear {
-                    steps = session.archive.steps
-                    max = session.archive.maxSteps
-                }
+                .padding(.horizontal)
             } else {
-                Image(systemName: "speedometer")
-                    .font(.largeTitle)
-                    .foregroundColor(.secondary)
-                    .padding(.top, 100)
                 Image(systemName: "exclamationmark.triangle.fill")
                     .font(.largeTitle)
                     .foregroundColor(.pink)
-                    .padding(.vertical)
+                    .padding(.bottom, 5)
                 Text("Apple Health not available")
-                Text("Apple Health app is necessary\nto access your step count.")
+                Text("Apple Health app is necessary\nto get your step count.")
                     .multilineTextAlignment(.center)
                     .font(.callout)
                     .foregroundColor(.secondary)
