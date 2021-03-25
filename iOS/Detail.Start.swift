@@ -8,8 +8,10 @@ extension Detail {
         
         var body: some View {
             Button {
-                withAnimation(.easeInOut(duration: 0.3)) {
-                    session.archive.start(challenge)
+                session.health.request(challenge) {
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        session.archive.start(challenge)
+                    }
                 }
             } label: {
                 ZStack {

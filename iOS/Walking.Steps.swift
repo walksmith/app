@@ -14,7 +14,7 @@ extension Walking {
             ZStack {
                 Ring(percent: 1)
                     .stroke(Color.blue.opacity(0.2), lineWidth: 25)
-                Ring(percent: max == 0 ? 0 : .init(steps) / .init(max))
+                Ring(percent: max == 0 ? 0 : .init(steps % max) / .init(max))
                     .stroke(LinearGradient(
                                 gradient: .init(colors: [.init(.systemIndigo), .blue]),
                                 startPoint: .top,
@@ -29,6 +29,14 @@ extension Walking {
                         Text(NSNumber(value: max), formatter: session.decimal)
                             .font(.title3)
                             .foregroundColor(.secondary)
+                        if steps > max {
+                            Group {
+                                Text(NSNumber(value: steps / max), formatter: session.decimal) +
+                                Text(verbatim: "x")
+                            }
+                            .font(Font.title.bold())
+                            .foregroundColor(.accentColor)
+                        }
                     }
                 }
             }
